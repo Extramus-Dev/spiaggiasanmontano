@@ -8,18 +8,18 @@
 	</div>
   <div class="container-fluid" style="padding-top:30px;">
     <div class="row">
-      <div class="col-sm-2">
-        {{-- <div class="card">
-          <div class="card-header bg-info" id="price_style">
-            <span>{{ __('Instructions') }}</span>
-          </div>
+      <div class="col-sm-3">
+        <div class="card">
+          {{-- <div class="card-header bg-info" id="price_style">
+          </div> --}}
           <div class="card-body" style="font-size:12px;">
+            <strong class="text-primary">{{ __('Instructions') }}</strong>
             <li>{{ __('Choose the day you wish to book') }}</li>
             <li>{{ __('Update the map to see availability') }}</li>
-            <li>{{ __('Select your favorite seat') }}</li><br>
-            <p style="text-align:justify;">{{ __('The white umbrellas are not bookable because they are intentionally left free for access to guests arriving at Negombo without having booked') }}.</p>
+            <li>{{ __('Select your favorite seat') }}</li>
+            <p style="text-align:justify; margin:0px;">{{ __('The white umbrellas are not bookable because they are intentionally left free for access to guests arriving at Negombo without having booked') }}.</p>
           </div>
-        </div> --}}
+        </div>
       </div>
       <div class="col-sm-8 offset-sm-1">
         <h2 id ="heading_qt">{{ __('Book your favorite place on the map') }}</h2>
@@ -256,9 +256,9 @@ var date = tomorrow.getFullYear()+'-'+(tomorrow.getMonth()+1)+'-'+tomorrow.getDa
   @include('users._closedbooking')
 
   <script>
-      $(".mapmarkgycls").click(function () {
-          $('#myModal').modal('show');
-      });
+      // $(".mapmarkgycls").click(function () {
+      //     $('#myModal').modal('show');
+      // });
 
       @isset($maparray['err_msg3'])
           $('#bookingStopedModal').modal({

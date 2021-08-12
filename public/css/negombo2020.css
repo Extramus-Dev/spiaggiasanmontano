@@ -93,10 +93,11 @@ body {
 	background: #388E3C;
 }
 .containersmallmap .mapmarkgycls{
-	background: #388E3C;
+	background: white;
+  color:black;
 }
 .containersmallmap .mapmarkgycls:hover{
-	background: #00C853;
+	background: white;
 }
 .containersmallmap .mapmarkredcls{
 	background: #D50000;

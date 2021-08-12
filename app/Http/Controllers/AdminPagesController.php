@@ -194,7 +194,6 @@ class AdminPagesController extends Controller
           continue;
         }
         $place->status = $booking->place_is_available($place->place_id, $startDate, $endDate);
-        -$place->status = $booking->place_is_available($place->place_id, $startDate, $endDate);
         $place->status = $booking->place_is_available_subs($place->place_id, $startDate, $endDate, $place->status);
       }
 
