@@ -13,6 +13,7 @@ use App\Models\PromoCode;
 use App\Models\TempbookingCard;
 use App\Mail\SendMail;
 
+use DateTime;
 use Auth;
 
 class PagesController extends Controller
@@ -196,6 +197,10 @@ class PagesController extends Controller
       $booking->user_checkin = $request->t_start;
       $booking->user_checkout = $request->checkout_temp;
       // $booking->user_promo = $request->promocode;
+      $datetime1 = new DateTime($booking->user_checkin);
+      $datetime2 = new DateTime($booking->user_checkout);
+      $interval = $datetime1->diff($datetime2);
+      $numberofdays = $interval->format('%a');
 
       $booking->user_payment_type = $request->payment_type;
       if($booking->user_payment_type == "Credit Card"){
@@ -215,7 +220,7 @@ class PagesController extends Controller
       $price_temp = $set_admin->calculatePrice($place, $booking->user_checkin, $booking->user_checkout, $booking->user_no_of_guest);
       $place->price =  $price_temp;
 
-      if($promoCode->checkingValidity($promo, $place->map_name)){
+      if($promoCode->checkingValidity($promo, $place->map_name, $numberofdays)){
         $booking->user_promo = $promo;
 
 
@@ -293,6 +298,13 @@ class PagesController extends Controller
       $booking->user_payment_type = $request->user_payment_type;
       $booking->user_booking_tracking_id = uniqid('negombo_', true);
 
+      //getting number of days
+
+      $datetime1 = new DateTime($booking->user_checkin);
+      $datetime2 = new DateTime($booking->user_checkout);
+      $interval = $datetime1->diff($datetime2);
+      $numberofdays = $interval->format('%a');
+
       $place = Place::where('place_id',$booking->place_id)->first();
 
       // ToDo calculate place price
@@ -316,7 +328,7 @@ class PagesController extends Controller
       $promoCode = new PromoCode;
       $discount = 0;
 
-      if($promoCode->checkingValidity($promo, $place->map_name) && $promoCode->usedPromoOnce($promo)){
+      if($promoCode->checkingValidity($promo, $place->map_name, $numberofdays) && $promoCode->usedPromoOnce($promo, $numberofdays)){
         $booking->user_promo = $promo;
         $discount = $promoCode->discountCalculate($booking->user_promo, $place->price);
         $place->price = $place->price - $discount;

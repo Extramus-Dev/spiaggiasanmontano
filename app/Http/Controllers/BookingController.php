@@ -12,6 +12,8 @@ use App\Models\Place;
 use App\Models\TempBooking;
 use App\Models\PromoCode;
 use App\Models\SettingAdmin;
+
+use DateTime;
 use App\Models\TempbookingCard;
 
 class BookingController extends Controller
@@ -57,6 +59,12 @@ class BookingController extends Controller
 
             $booking->user_checkin = $tempBookingInfo->user_checkin;
             $booking->user_checkout = $tempBookingInfo->user_checkout;
+            //getting number of days
+
+            $datetime1 = new DateTime($booking->user_checkin);
+            $datetime2 = new DateTime($booking->user_checkout);
+            $interval = $datetime1->diff($datetime2);
+            $numberofdays = $interval->format('%a');
 
             if(!$booking->check_availability()){
               return redirect()->route('error.404');
@@ -71,7 +79,7 @@ class BookingController extends Controller
             $promoCode = new PromoCode;
             $discount = 0;
 
-            if($promoCode->checkingValidity($promo, $place->map_name) && $promoCode->usedPromoOnce($promo)){
+            if($promoCode->checkingValidity($promo, $place->map_name, $numberofdays) && $promoCode->usedPromoOnce($promo, $numberofdays)){
               $booking->user_promo = $promo;
               $discount = $promoCode->discountCalculate($booking->user_promo, $place->price);
               $place->price = $place->price - $discount;

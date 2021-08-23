@@ -24,11 +24,11 @@
       @if ($maparray['booking']->user_payment_type == "Paypal")
         <input type="hidden"  name="paid_ammount" id="paid_ammount">
         <br>
-        <input style="float:right;" id="btn_booking_data_pass" type="submit" value="{{ __('Continue') }}" class="btn btn-success" disabled>
+        <input style="float:right;" id="btn_booking_data_pass" type="submit" value="{{ __('Continue') }}" class="btn btn-info" disabled>
       @else
         <input type="hidden"  name="paid_ammount" id="paid_ammount" value="{{ $maparray['booking']->paid_ammount }}">
         <br>
-        <input style="float:right;" id="btn_booking_data_pass" type="submit" value="{{ __('Continue') }}" class="btn btn-success">
+        <input style="float:right;" id="btn_booking_data_pass" type="submit" value="{{ __('Continue') }}" class="btn btn-info">
       @endif
 
 

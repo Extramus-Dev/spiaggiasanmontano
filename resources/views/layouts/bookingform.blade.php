@@ -57,7 +57,7 @@
    <div class="t-datepicker" style="display:none;" id="booking_day_start"><span style="display:none;" class="t-check-in" name="booking_day_start"></span><span style="display:none;" name="booking_day_end" class="t-check-out"></span></div>
    {{-- <input id="booking_day_start" placeholder="DD-MM-YY" name="booking_day_start" class="form-control booking_inp_textbox_style"> --}}
  {{-- </div><br><br> --}}
-  {{-- <div class="form-group">
+  <div class="form-group">
    <label >{{ __('Promo Code') }}</label>
    @if ($maparray['error_msg']==1)
      <input id="promoCode" type="text" name="promocode" class="form-control booking_inp_textbox_style" autofocus>
@@ -66,7 +66,7 @@
      <input id="promoCode" type="text" name="promocode" class="form-control booking_inp_textbox_style">
    @endif
 
-  </div> --}}
+  </div>
   <div class="form-group">
     <label >{{ __('Payment Type') }}: </label><br>
     {{-- <input type="radio" name="payment_type" value="Paypal" checked>
@@ -75,8 +75,8 @@
     <label for="Stripe" class="booking_payment_type_style">{{ __('Stripe') }}</label> --}}
     <input type="radio" name="payment_type" value="Credit Card" checked>
     <label for="Card" class="booking_payment_type_style">{{ __('Credit Card') }}</label>
-    {{-- <input type="radio" name="payment_type" value="Agreements">
-    <label for="Subscribe" class="booking_payment_type_style">{{ __('Agreements') }}</label> --}}
+    <input type="radio" name="payment_type" value="Agreements">
+    <label for="Subscribe" class="booking_payment_type_style">{{ __('Agreements') }}</label>
     @auth
       <input type="radio" name="payment_type" value="Entrance">
       <label for="Entrance" class="booking_payment_type_style">{{ __('Entrance') }}</label>

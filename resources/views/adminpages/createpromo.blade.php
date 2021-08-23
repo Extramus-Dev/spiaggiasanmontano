@@ -9,7 +9,7 @@
                 <div class="card-header">{{ __('Create Promo') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="#">
+                    <form method="POST" action="{{ route('admin.promocodes.add') }}">
                         @csrf
 
                         <div class="form-group row">
@@ -62,6 +62,22 @@
                         </div>
 
                         <div class="form-group row">
+                            <label for="numberofadults" class="col-md-4 col-form-label text-md-right">Number of Adults</label>
+                            <div class="col-md-6">
+                                <input id="numberofadults" type="number" class="form-control" name="numberofadults" min="1" required>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group row">
+                            <label for="numberofbabies" class="col-md-4 col-form-label text-md-right">Number of Babies</label>
+                            <div class="col-md-6">
+                                <input id="numberofbabies" type="number" class="form-control" name="numberofbabies" min="0" required>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group row">
                             <label for="discount" class="col-md-4 col-form-label text-md-right">{{ __('Number of Use') }}</label>
                             <div class="col-md-6">
                                 <input id="numberofuse" type="number" class="form-control" name="numberofuse" required>
@@ -94,4 +110,4 @@
     </div>
   </div>
   <div style="padding-top: 150px;"></div>
-@endsection
+  @endsection

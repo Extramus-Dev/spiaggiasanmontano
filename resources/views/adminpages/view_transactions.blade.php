@@ -2,7 +2,7 @@
 
 @section('section')
   <div class="container paddingTop20">
-    <h1>{{ __('Negombo Paypal Transactions') }}</h1>
+    <h1>{{ __('Spiaggia Paypal Transactions') }}</h1>
     <hr>
     <div class="row">
         <div class="col-sm-12">

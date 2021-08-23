@@ -25,6 +25,8 @@ use App\Models\PromoCode;
 use App\Models\TempBooking;
 use App\Mail\SendMail;
 
+use DateTime;
+
 class PaymentController extends Controller
 {
     //
@@ -51,7 +53,7 @@ class PaymentController extends Controller
         $booking->baby_surname2 = $request->baby_surname2;
       if(isset($request->baby_surname3))
         $booking->baby_surname3 = $request->baby_surname3;
-      if(isset($request->baby_surname4)
+      if(isset($request->baby_surname4))
         $booking->baby_surname4 = $request->baby_surname4;
 
       $booking->user_checkin = $request->user_checkin;
@@ -155,6 +157,10 @@ class PaymentController extends Controller
       $booking->user_checkin = $request->user_checkin;
       $booking->user_checkout = $request->user_checkout;
       $booking->user_booking_tracking_id = $request->user_booking_tracking_id;
+      $datetime1 = new DateTime($booking->user_checkin);
+      $datetime2 = new DateTime($booking->user_checkout);
+      $interval = $datetime1->diff($datetime2);
+      $numberofdays = $interval->format('%a');
 
       $booking->user_payment_type = $request->user_payment_type;
 
@@ -169,7 +175,7 @@ class PaymentController extends Controller
       $promoCode = new PromoCode;
       $discount = 0;
 
-      if($promoCode->checkingValidity($promo, $place->map_name) && $promoCode->usedPromoOnce($promo)){
+      if($promoCode->checkingValidity($promo, $place->map_name, $numberofdays) && $promoCode->usedPromoOnce($promo, $numberofdays)){
         $booking->user_promo = $promo;
         $discount = $promoCode->discountCalculate($booking->user_promo, $place->price);
         $place->price = $place->price - $discount;

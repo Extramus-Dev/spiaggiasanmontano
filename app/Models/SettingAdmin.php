@@ -14,6 +14,111 @@ class SettingAdmin extends Model
     use HasFactory;
 
     public function calculatePrice($place, $checkin, $checkout, $numOfadults){
+        $numOfdays = date_diff(date_create($checkin), date_create($checkout));
+        $numOfdays->d = $numOfdays->d+1;
+        $price_tm = 0;
+        $AllPrices = SettingAdmin::orderBy('id')->get();
+          for($counter=1; $counter<=$numOfdays->d; $counter++){
+            //MayAndJune
+            if(strtotime($checkin)>=strtotime($AllPrices[0]->season_start) && strtotime($checkin)<=strtotime('2021-06-30')){
+              if(SettingAdmin::checkWeekOrNot($checkin) == 0){
+                if($numOfadults == 1){
+                    $price_tm += $AllPrices[0]->adult1_price;
+                  }else if($numOfadults == 2){
+                    $price_tm += $AllPrices[0]->adult2_price;
+                  }else if($numOfadults == 3){
+                    $price_tm += $AllPrices[0]->adult3_price;
+                  }else if($numOfadults == 4){
+                    $price_tm += $AllPrices[0]->adult4_price;
+                }
+                }else{
+                  if($numOfadults == 1){
+                    $price_tm += $AllPrices[0]->adult1_price_weekend;
+                  }else if($numOfadults == 2){
+                    $price_tm += $AllPrices[0]->adult2_price_weekend;
+                  }else if($numOfadults == 3){
+                    $price_tm += $AllPrices[0]->adult3_price_weekend;
+                  }else if($numOfadults == 4){
+                    $price_tm += $AllPrices[0]->adult4_price_weekend;
+                }
+              }
+             //July
+            }else if(strtotime($checkin)>=strtotime($AllPrices[1]->season_start) && strtotime($checkin)<=strtotime($AllPrices[1]->season_end)){
+              if(SettingAdmin::checkWeekOrNot($checkin) == 0){
+                if($numOfadults == 1){
+                      $price_tm += $AllPrices[1]->adult1_price;
+                    }else if($numOfadults == 2){
+                      $price_tm += $AllPrices[1]->adult2_price;
+                    }else if($numOfadults == 3){
+                      $price_tm += $AllPrices[1]->adult3_price;
+                    }else if($numOfadults == 4){
+                      $price_tm += $AllPrices[1]->adult4_price;
+                    }
+                }else{
+                    if($numOfadults == 1){
+                      $price_tm += $AllPrices[1]->adult1_price_weekend;
+                    }else if($numOfadults == 2){
+                      $price_tm += $AllPrices[1]->adult2_price_weekend;
+                    }else if($numOfadults == 3){
+                      $price_tm += $AllPrices[1]->adult3_price_weekend;
+                    }else if($numOfadults == 4){
+                      $price_tm += $AllPrices[1]->adult4_price_weekend;
+                    }
+                }
+                //August
+            }else if(strtotime($checkin)>=strtotime($AllPrices[2]->season_start) && strtotime($checkin)<=strtotime($AllPrices[2]->season_end)){
+                if(SettingAdmin::checkWeekOrNot($checkin) == 0){
+                    if($numOfadults == 1){
+                      $price_tm += $AllPrices[2]->adult1_price;
+                    }else if($numOfadults == 2){
+                      $price_tm += $AllPrices[2]->adult2_price;
+                    }else if($numOfadults == 3){
+                      $price_tm += $AllPrices[2]->adult3_price;
+                    }else if($numOfadults == 4){
+                      $price_tm += $AllPrices[2]->adult4_price;
+                  }
+                }else{
+                    if($numOfadults == 1){
+                      $price_tm += $AllPrices[2]->adult1_price_weekend;
+                    }else if($numOfadults == 2){
+                      $price_tm += $AllPrices[2]->adult2_price_weekend;
+                    }else if($numOfadults == 3){
+                      $price_tm += $AllPrices[2]->adult3_price_weekend;
+                    }else if($numOfadults == 4){
+                      $price_tm += $AllPrices[2]->adult4_price_weekend;
+                  }
+               }
+               //September
+            }else if(strtotime($checkin)>=strtotime($AllPrices[3]->season_start) && strtotime($checkin)<=strtotime($AllPrices[3]->season_end)){
+                    if(SettingAdmin::checkWeekOrNot($checkin) == 0){
+                      if($numOfadults == 1){
+                          $price_tm += $AllPrices[3]->adult1_price;
+                      }else if($numOfadults == 2){
+                          $price_tm += $AllPrices[3]->adult2_price;
+                      }else if($numOfadults == 3){
+                          $price_tm += $AllPrices[3]->adult3_price;
+                      }else if($numOfadults == 4){
+                          $price_tm += $AllPrices[3]->adult4_price;
+                      }
+                    }else{
+                        if($numOfadults == 1){
+                          $price_tm += $AllPrices[3]->adult1_price_weekend;
+                        }else if($numOfadults == 2){
+                          $price_tm += $AllPrices[3]->adult2_price_weekend;
+                        }else if($numOfadults == 3){
+                          $price_tm += $AllPrices[3]->adult3_price_weekend;
+                        }else if($numOfadults == 4){
+                          $price_tm += $AllPrices[3]->adult4_price_weekend;
+                      }
+                   }
+                }
+            $nextday = date('Y-m-d', strtotime("+1 day", strtotime($checkin)));
+            $checkin = $nextday;
+         }
+         return $price_tm;
+    }
+
+    public function calculatePriceJuneOnly($place, $checkin, $checkout, $numOfadults){
       $numOfdays = date_diff(date_create($checkin), date_create($checkout));
       $numOfdays->d = $numOfdays->d+1;
       $price_tm = 0;
@@ -183,5 +288,25 @@ class SettingAdmin extends Model
             return true;
         }
         return false;
+    }
+
+    public function checkWeekOrNot($checkin){
+        $day = date('D', strtotime($checkin));
+        if($day=="Mon"){
+          return 0;
+        }else if($day=="Tue"){
+          return 0;
+        }else if($day=="Wed"){
+          return 0;
+        }else if($day=="Thu"){
+          return 0;
+        }else if($day=="Fri"){
+          return 0;
+        }else if($day=="Sat"){
+          return 1;
+        }else if($day=="Sun"){
+          return 1;
+        }
+        return 2;
     }
 }

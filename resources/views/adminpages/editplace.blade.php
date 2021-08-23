@@ -2,7 +2,7 @@
 @section('section')
 
   <div class="container paddingTop20">
-    <h1>Negombo Edit Place</h1>
+    <h1>Spiaggia Edit Place</h1>
     <hr>
       <form action="{{ route('admin.place.update', $place->place_id) }}" method="POST">
           {{ csrf_field() }}

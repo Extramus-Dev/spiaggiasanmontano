@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: May 14, 2021 at 11:28 AM
+-- Generation Time: Jun 08, 2021 at 03:31 AM
 -- Server version: 5.7.32-0ubuntu0.18.04.1
 -- PHP Version: 7.4.13
 
@@ -127,7 +127,6 @@ INSERT INTO `bookings` (`id`, `place_id`, `user_fullname`, `payer_name`, `user_s
 (150, 'X15', 'Brasiello', 'Gabriella Pilato', 'Brasiello', 'daniloaxe@hotmail.it', '3356575567', 4, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-07-01', '2021-07-31', 1, NULL, 'Entrance', 'negombo_6086c717a24cc5.98131279', 1850.00, 'Gabriella Pilato', '2021-04-26 13:58:47', '2021-04-26 13:58:47'),
 (151, 'X25', 'Brasiello', 'Gabriella Pilato', 'Brasiello', 'daniloaxe@hotmail.it', '3356575567', 4, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-08-01', '2021-08-31', 1, NULL, 'Entrance', 'negombo_6086c735bbb0d0.51764995', 1800.00, 'Gabriella Pilato', '2021-04-26 13:59:17', '2021-04-26 13:59:17'),
 (152, 'X35', 'Forzati Maurizio', 'Gabriella Pilato', 'Forzati Maurizio', 'maurizioforzati@gmail.com', '3355862569', 2, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-07-01', '2021-08-31', 1, NULL, 'Entrance', 'negombo_6086c8953539b7.19832291', 2700.00, 'Gabriella Pilato', '2021-04-26 14:05:09', '2021-04-26 14:05:09'),
-(153, 'X45', 'viviana pacifico', 'viviana pacifico', 'viviana pacifico', 'viviana.pacifico@yahoo.it', '3343788280', 2, 1, 'raffaella cangiano', NULL, NULL, 'aurora sarlo', NULL, NULL, NULL, '2021-06-01', '2021-07-31', 1, NULL, 'Credit Card', 'negombo_6087c4d1911003_06017001', 2600.00, 'user', '2021-04-27 08:02:22', '2021-04-27 08:02:22'),
 (154, 'T22', 'Brasiello Renata', 'Salvatore Scuotto', 'Brasiello Renata', 'slv.scuotto@gmail.com', '3383058910', 1, 1, NULL, NULL, NULL, 'Scuotto salvatore', NULL, NULL, NULL, '2021-07-01', '2021-08-31', 1, NULL, 'Credit Card', 'negombo_6087c4e5b4a0f8_19707615', 2100.00, 'user', '2021-04-27 08:03:19', '2021-04-27 08:03:19'),
 (155, 'X34', 'Rita Vertechi Montefredini', 'Rita Vertechi Montefredini', 'Rita Vertechi Montefredini', 'paolo.montefredini@gmail.com', '3336634642', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-07-01', '2021-08-31', 1, NULL, 'Credit Card', 'negombo_6087c4f7be5124_05180385', 2200.00, 'user', '2021-04-27 08:03:25', '2021-04-27 08:03:25'),
 (156, 'T34', 'Fernando De maria', 'Daniela Lombardo', 'Fernando De maria', 'danielalombardo@hotmail.it', '3496784423', 3, 0, 'Daniela Lombardo', 'Roberto De Maria', NULL, NULL, NULL, NULL, NULL, '2021-07-01', '2021-08-31', 1, NULL, 'Credit Card', 'negombo_6087c512c16113_08120110', 2900.00, 'user', '2021-04-27 08:04:11', '2021-04-27 08:04:11'),
@@ -165,7 +164,6 @@ INSERT INTO `bookings` (`id`, `place_id`, `user_fullname`, `payer_name`, `user_s
 (195, 'S44', 'LUIGI RUGGIERO', 'LUIGI RUGGIERO', 'LUIGI RUGGIERO', 'ruggieroinvestigazioni@virgilio.it', '3397282092', 3, 0, 'NILIMA DI MARE', 'AURORA RUGGIERO', NULL, NULL, NULL, NULL, NULL, '2021-08-01', '2021-08-31', 1, NULL, 'Credit Card', 'negombo_608932cad500e5_51493356', 1350.00, 'user', '2021-04-28 10:03:51', '2021-04-28 10:03:51'),
 (197, 'Q33', 'Gianna Galluzzo', 'Giorgio Menzani', 'Gianna Galluzzo', 'menzg@libero.it', '3498215830', 3, 0, 'Chiara Menzani', 'Francesca Menzani', NULL, NULL, NULL, NULL, NULL, '2021-08-01', '2021-08-31', 1, NULL, 'Credit Card', 'negombo_6089329bcb7740_36220573', 1300.00, 'user', '2021-04-28 10:04:21', '2021-04-28 10:04:21'),
 (198, 'Q11', 'Roberta Tavassi', 'Roberta Tavassi', 'Roberta Tavassi', 'roberta.tavassi@hotmail.it', '3480198802', 4, 1, 'Daniela Zincone', 'Edoardo Lombardi', 'Viola Di Nocera', 'Leone Lombardi', NULL, NULL, NULL, '2021-07-01', '2021-07-31', 1, NULL, 'Credit Card', 'negombo_608932bb7fb441_20786919', 1600.00, 'user', '2021-04-28 10:04:25', '2021-04-28 10:04:25'),
-(199, 'V14', 'Gisa Iorio', 'Iorio Gisa', 'Gisa Iorio', 'gisaiorio@gmail.com', '3384247190', 2, 2, 'Sergio Capezzuto', NULL, NULL, 'Ludovica Capezzuto', 'Riccardo Capezzuto', NULL, NULL, '2021-07-01', '2021-07-31', 1, NULL, 'Credit Card', 'negombo_608932e60bf801_34669487', 1400.00, 'user', '2021-04-28 10:05:33', '2021-04-28 10:05:33'),
 (200, 'V24', 'fabio arino', 'fabio arino', 'fabio arino', 'dott.fabioarino@gmail.com', '+393385339817', 2, 2, 'tremolaterra maria', NULL, NULL, 'errico arino', 'sofia arino', NULL, NULL, '2021-07-01', '2021-07-31', 1, NULL, 'Credit Card', 'negombo_608932dca9a990_30422163', 1350.00, 'user', '2021-04-28 10:05:50', '2021-04-28 10:05:50'),
 (201, 'R14', 'Alessandro mele', 'Antonella aloschi', 'Alessandro mele', 'antonella@aloschibros.com', '3487713454', 2, 3, 'Miriam mele', NULL, NULL, 'Andrea monti', NULL, NULL, NULL, '2021-07-06', '2021-07-29', 1, NULL, 'Credit Card', 'negombo_6089330d7fa5e8_76677212', 1120.00, 'user', '2021-04-28 10:05:52', '2021-04-28 10:05:52'),
 (202, 'Q23', 'Pasquale Scarano', 'Pasquale <<<<<<<<<scarano', 'Pasquale Scarano', 'scaranop16@gmail.com', '3387097698', 2, 0, 'Immacolata Delle Curti', NULL, NULL, NULL, NULL, NULL, NULL, '2021-08-01', '2021-08-31', 1, NULL, 'Credit Card', 'negombo_608932ef1e4019_05566773', 1150.00, 'user', '2021-04-28 10:06:23', '2021-04-28 10:06:23'),
@@ -181,8 +179,6 @@ INSERT INTO `bookings` (`id`, `place_id`, `user_fullname`, `payer_name`, `user_s
 (213, 'R32', 'Alfonso Piccirillo (1750)', 'Gabriella Pilato', 'Alfonso Piccirillo (1750)', 'atch.piccirillo@gmail.com', '081986152', 3, 0, 'Francesco Piccirillo', 'Mariarosaria Sbailo', NULL, NULL, NULL, NULL, NULL, '2021-08-01', '2021-08-31', 1, NULL, 'Entrance', 'negombo_608a7966a5a162.25043067', 1350.00, 'Gabriella Pilato', '2021-04-29 09:16:22', '2021-04-29 09:16:22'),
 (214, 'Q43', 'Iacono Anna (1650)', 'Gabriella Pilato', 'Iacono Anna (1650)', 'backoffice@negombo.it', '081986152', 2, 0, 'Iacono Anna', NULL, NULL, NULL, NULL, NULL, NULL, '2021-07-01', '2021-08-31', 1, NULL, 'Entrance', 'negombo_608a7a0430f4a4.50924160', 2100.00, 'Gabriella Pilato', '2021-04-29 09:19:00', '2021-04-29 09:19:00'),
 (216, 'T44', 'Chiara Carrozzo', 'Gabriella Pilato', 'Chiara Carrozzo', 'adriano.zeni@gmail.com', '3382619851', 2, 1, 'Silvia Ficarella', NULL, NULL, NULL, NULL, NULL, NULL, '2021-08-01', '2021-08-31', 1, NULL, 'Entrance', 'negombo_608a810a137dd7.92464586', 1200.00, 'Gabriella Pilato', '2021-04-29 09:48:58', '2021-04-29 09:48:58'),
-(217, 'X21', 'Francesca Lacava', 'Gabriella Pilato', 'Francesca Lacava', 'francesca.lacava@studiolegalelacava.com', '3349502172', 2, 0, 'Dora Pozzi', NULL, NULL, NULL, NULL, NULL, NULL, '2021-06-20', '2021-07-31', 1, NULL, 'Entrance', 'negombo_608a896a42d8f9.73824604', 1913.00, 'Gabriella Pilato', '2021-04-29 10:24:42', '2021-04-29 10:24:42'),
-(218, 'X21', 'Francesca Lacava', 'Gabriella Pilato', 'Francesca Lacava', 'francesca.lacava@studiolegalelacava.com', '3349502172', 2, 0, 'Dora Pozzi', NULL, NULL, NULL, NULL, NULL, NULL, '2021-09-01', '2021-09-11', 1, NULL, 'Entrance', 'negombo_608a8999223e39.92735368', 568.00, 'Gabriella Pilato', '2021-04-29 10:25:29', '2021-04-29 10:25:29'),
 (219, 'T14', 'Alessandro Banfi (1750)', 'Gabriella Pilato', 'Alessandro Banfi (1750)', 'robertabanfi@hotmail.it', '3282198311', 3, 0, 'Roberta Banfi', 'Maria Rosaria Salamati', NULL, NULL, NULL, NULL, NULL, '2021-07-01', '2021-07-31', 1, NULL, 'Entrance', 'negombo_608a8ba1943983.93946775', 1550.00, 'Gabriella Pilato', '2021-04-29 10:34:09', '2021-04-29 10:34:09'),
 (220, 'T14', 'Alina Di Caprio (Picillo)', 'Gabriella Pilato', 'Alina Di Caprio (Picillo)', 'backoffice@negombo.it', '081986152', 3, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-08-01', '2021-08-31', 1, NULL, 'Entrance', 'negombo_608a8bde289841.06647897', 1550.00, 'Gabriella Pilato', '2021-04-29 10:35:10', '2021-04-29 10:35:10'),
 (221, 'V43', 'Vincenzo Nardelli (1650)', 'Gabriella Pilato', 'Vincenzo Nardelli (1650)', 'vin83nar@gmail.com', '3313347131', 2, 0, 'Nunzia Sammarco', NULL, NULL, NULL, NULL, NULL, NULL, '2021-08-01', '2021-08-31', 1, NULL, 'Admin', 'negombo_608a8e1d4a1943.79026791', 0.00, 'Gabriella Pilato', '2021-04-29 10:44:45', '2021-04-29 10:44:45'),
@@ -195,14 +191,27 @@ INSERT INTO `bookings` (`id`, `place_id`, `user_fullname`, `payer_name`, `user_s
 (229, 'R13', 'Direzione', 'Gabriella Pilato', 'Direzione', 'backoffice@negombo.it', '0', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-07-01', '2021-08-31', 1, NULL, 'Admin', 'negombo_608feb6ecd4e58.14836562', 0.00, 'Gabriella Pilato', '2021-05-03 12:24:14', '2021-05-03 12:24:14'),
 (230, 'R22', 'Sgambati', 'Gabriella Pilato', 'Sgambati', 'backoffice@negombo.it', '081986152', 2, 2, 'Sgambati', NULL, NULL, 'Sgambati', 'Sgambati', NULL, NULL, '2021-07-01', '2021-07-31', 1, NULL, 'Entrance', 'negombo_608fed13c5b278.96685126', 1200.00, 'Gabriella Pilato', '2021-05-03 12:31:15', '2021-05-03 12:31:15'),
 (231, 'R14', 'D\'Amato Anzovino Annamaria', 'Gabriella Pilato', 'D\'Amato Anzovino Annamaria', 'annamariaanzovino@libero.it', '3335620771', 4, 0, 'D\'Amato Paolo', 'D\'Amato', 'D\'Amato', NULL, NULL, NULL, NULL, '2021-08-01', '2021-08-31', 1, NULL, 'Entrance', 'negombo_609119132b1716.05577969', 1650.00, 'Gabriella Pilato', '2021-05-04 09:51:15', '2021-05-04 09:51:15'),
-(232, 'T13', 'Direzione', 'Gabriella Pilato', 'Direzione', 'backoffice@negombo.it', '081986152', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-07-01', '2021-07-31', 1, NULL, 'Admin', 'negombo_60911b2b5b92c6.08252024', 0.00, 'Gabriella Pilato', '2021-05-04 10:00:11', '2021-05-04 10:00:11'),
 (233, 'T13', 'Mauro D\'Ambrosi', 'Gabriella Pilato', 'Mauro D\'Ambrosi', 'backoffice@negombo.it', '081986152', 4, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-08-01', '2021-08-31', 1, NULL, 'Entrance', 'negombo_60911b46668f81.91482510', 1750.00, 'Gabriella Pilato', '2021-05-04 10:00:38', '2021-05-04 10:00:38'),
 (234, 'Q21', 'Forneris (1650)', 'Gabriella Pilato', 'Forneris (1650)', 'backoffice@negombo.it', '081986152', 2, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-07-01', '2021-07-31', 1, NULL, 'Entrance', 'negombo_60911ce48c9389.78684383', 1150.00, 'Gabriella Pilato', '2021-05-04 10:07:32', '2021-05-04 10:07:32'),
 (235, 'T41', 'Carmine De Domenico  (1650)', 'Gabriella Pilato', 'Carmine De Domenico  (1650)', 'carminededomenico66@libero.it', '3384587190', 2, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-08-01', '2021-08-31', 1, NULL, 'Entrance', 'negombo_60911e0caadb45.20720847', 1200.00, 'Gabriella Pilato', '2021-05-04 10:12:28', '2021-05-04 10:12:28'),
 (236, 'S43', 'Maria Teresa Aversano (1750)', 'Gabriella Pilato', 'Maria Teresa Aversano (1750)', 'backoffice@negombo.it', '081986152', 3, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-08-01', '2021-08-31', 1, NULL, 'Entrance', 'negombo_609a4095425a13.77653610', 1350.00, 'Gabriella Pilato', '2021-05-11 08:30:13', '2021-05-11 08:30:13'),
 (238, 'V32', 'Giorgia Riccardi (1180)', 'Gabriella Pilato', 'Giorgia Riccardi (1180)', 'giorgiariccardi.bmc@gmail.com', '081986152', 2, 0, 'Alessandro Consonni', NULL, NULL, NULL, NULL, NULL, NULL, '2021-07-10', '2021-07-31', 1, NULL, 'Entrance', 'negombo_609b8d58e9f4e3.91803316', 1063.00, 'Gabriella Pilato', '2021-05-12 08:10:00', '2021-05-12 08:10:00'),
 (239, 'V42', 'Fulvio Marruocco (1850)', 'Gabriella Pilato', 'Fulvio Marruocco (1850)', 'fulmar2003@libero.it', '0', 4, 0, 'Marta Marruocco', 'Renata Di Maria', 'Antonia Sacchi', NULL, NULL, NULL, NULL, '2021-08-01', '2021-08-31', 1, NULL, 'Admin', 'negombo_609d06db0d68f0.07526487', 0.00, 'Gabriella Pilato', '2021-05-13 11:00:43', '2021-05-13 11:00:43'),
-(240, 'Q44', 'Pasquale Pezzella (1650)', 'Gabriella Pilato', 'Pasquale Pezzella (1650)', 'ppezzella@libero.it', '0', 2, 0, 'Maria Iovene', NULL, NULL, NULL, NULL, NULL, NULL, '2021-08-01', '2021-08-31', 1, NULL, 'Admin', 'negombo_609d0718c0fd83.06737849', 0.00, 'Gabriella Pilato', '2021-05-13 11:01:44', '2021-05-13 11:01:44');
+(240, 'Q44', 'Pasquale Pezzella (1650)', 'Gabriella Pilato', 'Pasquale Pezzella (1650)', 'ppezzella@libero.it', '0', 2, 0, 'Maria Iovene', NULL, NULL, NULL, NULL, NULL, NULL, '2021-08-01', '2021-08-31', 1, NULL, 'Admin', 'negombo_609d0718c0fd83.06737849', 0.00, 'Gabriella Pilato', '2021-05-13 11:01:44', '2021-05-13 11:01:44'),
+(263, 't13', 'Emmanuel Pinto - De Siano Maria (1650)', 'Antonio Gallo', 'Emmanuel Pinto - De Siano Maria (1650)', 'backoffice@negombo.it', '081986152', 2, 0, 'Maria De SIano', NULL, NULL, NULL, NULL, NULL, NULL, '2021-06-01', '2021-06-30', 1, NULL, 'Admin', 'negombo_60a249640ef388.28479772', 0.00, 'Antonio Gallo', '2021-05-17 10:45:56', '2021-05-17 10:45:56'),
+(264, 'X12', 'Vittorio Granata', 'Vittorio Granata', 'Vittorio Granata', 'granata.v@gmail.com', '3463769552', 2, 0, 'Nicole Incocciati', NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-22', '2021-05-22', 1, NULL, 'Credit Card', 'negombo_60a4d7b21644e0_50264141', 35.50, 'user', '2021-05-19 09:18:46', '2021-05-19 09:18:46'),
+(266, 'Q13', 'Antonio Gallo', 'Antonio Gallo', 'Antonio Gallo', '83antoniogallo@gmail.com', '+393388851460', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-24', '2021-05-24', 1, NULL, 'Entrance', 'negombo_60a62c0207c9c0.17886157', 28.00, 'Antonio Gallo', '2021-05-20 09:29:38', '2021-05-20 09:29:38'),
+(268, 'T13', 'Giuseppe Scordio', 'Alessandra', 'Giuseppe Scordio', 'organizzazione@spazioterpulliano.it', '3401995410', 2, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-23', '2021-05-23', 1, NULL, 'Entrance', 'negombo_60a7e1e8946713.69230770', 35.50, 'Alessandra', '2021-05-21 16:38:00', '2021-05-21 16:38:00'),
+(269, 'V14', 'Francesca Lacava', 'Gabriella Pilato', 'Francesca Lacava', 'backoffice@negombo.it', '0', 2, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-06-20', '2021-07-01', 1, NULL, 'Admin', 'negombo_60b35e9baece72.32206261', 0.00, 'Gabriella Pilato', '2021-05-30 09:44:59', '2021-05-30 09:44:59'),
+(270, 'V13', 'Maura Mirandanti', 'Maura mirandanti', 'Maura Mirandanti', 'miramaura.14@gmail.com', '3334424348', 2, 0, 'Pucci Duilio', NULL, NULL, NULL, NULL, NULL, NULL, '2021-06-02', '2021-06-02', 1, NULL, 'Credit Card', 'negombo_60b505e5bb2f82_94406803', 35.50, 'user', '2021-05-31 15:54:00', '2021-05-31 15:54:00'),
+(271, 'V14', 'Asprella LIBONATI Csrmela', 'Maura Mirandanti', 'Asprella LIBONATI Csrmela', 'miramaura.14@gmail.com', '3334424348', 2, 0, 'Caroselli Marco', NULL, NULL, NULL, NULL, NULL, NULL, '2021-06-02', '2021-06-02', 1, NULL, 'Credit Card', 'negombo_60b507110fba30_87101894', 35.50, 'user', '2021-05-31 15:57:09', '2021-05-31 15:57:09'),
+(273, 'X15', 'Viviana Pacifico', 'Gabriella Pilato', 'Viviana Pacifico', 'viviana.pacifico@yahoo.it', '3343788280', 2, 0, 'Raffaella Cangiano', NULL, NULL, NULL, NULL, NULL, NULL, '2021-06-01', '2021-06-30', 1, NULL, 'Entrance', 'negombo_60b7c0bbb66401.05190244', 1065.00, 'Gabriella Pilato', '2021-06-02 17:32:43', '2021-06-02 17:32:43'),
+(274, 'R11', 'LAURA LONGOBARDO', 'LAURA LONGOBARDO', 'LAURA LONGOBARDO', 'lauralongo@hotmail.com', '3392086927', 3, 2, 'MARIO COZZARELLI', 'LUDOVICA COSENTINO', NULL, 'PAOLA COZZARELLI', 'MARIA FRANCESCA SABBATINO', NULL, NULL, '2021-06-04', '2021-06-05', 1, NULL, 'Credit Card', 'negombo_60b8eb4a0dd248_27084123', 86.00, 'user', '2021-06-03 14:47:56', '2021-06-03 14:47:56'),
+(275, 'V11', 'Maura Mirandanti', 'Maura mirandanti', 'Maura Mirandanti', 'miramaura.14@gmail.com', '3334424348', 2, 0, 'Pucci duilio', NULL, NULL, NULL, NULL, NULL, NULL, '2021-06-05', '2021-06-05', 1, NULL, 'Credit Card', 'negombo_60b914b4708643_02161859', 35.50, 'user', '2021-06-03 17:44:44', '2021-06-03 17:44:44'),
+(276, 'V12', 'Carmela Asprella', 'Maura mirandanti', 'Carmela Asprella', 'miramaura.14@gmail.com', '3334424348', 2, 0, 'Marco Caroselli', NULL, NULL, NULL, NULL, NULL, NULL, '2021-06-05', '2021-06-05', 1, NULL, 'Credit Card', 'negombo_60b915c1c732e6_23754246', 35.50, 'user', '2021-06-03 17:48:37', '2021-06-03 17:48:37'),
+(277, 'T14', 'Cristina Rosaria Fioravanti', 'Cristina R. Fioravanti', 'Cristina Rosaria Fioravanti', 'fioravan@nytimes.com', '39 329 6162640', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-06-06', '2021-06-06', 1, NULL, 'Credit Card', 'negombo_60ba466ecdf2b4_71872695', 28.00, 'user', '2021-06-04 15:29:12', '2021-06-04 15:29:12'),
+(279, 'T14', 'Marella Riccardi', 'Gabriella Pilato', 'Marella Riccardi', 'backoffice@negombo.it', '081986152', 2, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-06-29', '2021-06-30', 1, NULL, 'Admin', 'negombo_60bce98c7847e1.99386541', 0.00, 'Gabriella Pilato', '2021-06-06 15:28:12', '2021-06-06 15:28:12'),
+(280, 's13', 'Loredana Cimmino (1050)', 'Gabriella Pilato', 'Loredana Cimmino (1050)', 'backoffice@negombo.it', '0', 1, 1, NULL, NULL, NULL, 'o', NULL, NULL, NULL, '2021-06-07', '2021-06-30', 1, NULL, 'Admin', 'negombo_60bceb4351ab26.72322737', 0.00, 'Gabriella Pilato', '2021-06-06 15:35:31', '2021-06-06 15:35:31');
 
 -- --------------------------------------------------------
 
@@ -292,65 +301,65 @@ CREATE TABLE `places` (
 --
 
 INSERT INTO `places` (`id`, `place_id`, `place_name`, `map_name`, `co_xl`, `co_yl`, `co_xs`, `co_ys`, `place_description`, `status`, `price1`, `price2`, `price3`, `price4`, `currency_type`, `created_at`, `updated_at`) VALUES
-(5, 'Q11', 'Q11', 'Sectors', 80, 278, 30, 165, 'none', 0, 950, 1200, 1400, 1600, 'EUR', '2021-04-13 20:58:51', '2021-04-17 09:03:08'),
-(6, 'Q12', 'Q12', 'Sectors', 108, 280, 39, 165, 'none', 0, 950, 1200, 1400, 1600, 'EUR', '2021-04-13 22:04:52', '2021-04-17 09:03:14'),
-(7, 'Q13', 'Q13', 'Sectors', 135, 277, 53, 169, 'none', 0, 950, 1200, 1400, 1600, 'EUR', '2021-04-16 07:35:40', '2021-04-16 07:35:40'),
-(8, 'Q14', 'Q14', 'Sectors', 165, 272, 58, 159, 'none', 0, 950, 1200, 1400, 1600, 'EUR', '2021-04-16 07:52:38', '2021-04-27 08:38:44'),
-(9, 'Q21', 'Q21', 'Sectors', 84, 303, 30, 175, 'none', -1, 900, 1150, 1350, 1550, 'EUR', '2021-04-16 07:53:37', '2021-04-28 08:46:09'),
-(10, 'Q22', 'Q22', 'Sectors', 110, 304, 40, 176, 'none', 0, 900, 1150, 1350, 1550, 'EUR', '2021-04-16 07:54:18', '2021-04-16 07:54:18'),
-(11, 'Q23', 'Q23', 'Sectors', 140, 301, 53, 176, 'none', 0, 900, 1150, 1350, 1550, 'EUR', '2021-04-16 07:54:47', '2021-04-16 07:54:47'),
-(12, 'Q24', 'Q24', 'Sectors', 167, 303, 62, 174, 'none', 0, 900, 1150, 1350, 1550, 'EUR', '2021-04-16 07:55:17', '2021-04-16 07:55:17'),
-(13, 'Q31', 'Q31', 'Sectors', 90, 338, 34, 194, 'none', 0, 850, 1100, 1300, 1500, 'EUR', '2021-04-16 07:56:14', '2021-04-16 07:56:14'),
-(14, 'Q32', 'Q32', 'Sectors', 115, 341, 45, 193, 'none', 0, 850, 1100, 1300, 1500, 'EUR', '2021-04-16 07:56:52', '2021-04-16 07:56:52'),
-(15, 'Q33', 'Q33', 'Sectors', 143, 338, 55, 191, 'none', 0, 850, 1100, 1300, 1500, 'EUR', '2021-04-16 07:57:25', '2021-04-19 06:47:38'),
-(16, 'Q34', 'Q34', 'Sectors', 168, 335, 65, 196, 'none', 0, 850, 1100, 1300, 1500, 'EUR', '2021-04-16 07:57:58', '2021-04-16 07:57:58'),
-(17, 'Q41', 'Q41', 'Sectors', 91, 376, 33, 215, 'none', 0, 800, 1050, 1250, 1450, 'EUR', '2021-04-16 07:58:23', '2021-04-16 07:58:23'),
-(18, 'Q42', 'Q42', 'Sectors', 118, 372, 44, 216, 'none', 0, 800, 1050, 1250, 1450, 'EUR', '2021-04-16 08:01:01', '2021-04-16 08:01:01'),
-(19, 'Q43', 'Q43', 'Sectors', 150, 367, 56, 212, 'none', 0, 800, 1050, 1250, 1450, 'EUR', '2021-04-16 08:01:31', '2021-04-16 08:01:31'),
-(20, 'Q44', 'Q44', 'Sectors', 171, 368, 65, 213, 'none', 0, 800, 1050, 1250, 1450, 'EUR', '2021-04-16 08:01:55', '2021-04-16 08:01:55'),
+(5, 'Q11', 'Q11', 'Sectors', 80, 275, 30, 165, 'none', 0, 950, 1200, 1400, 1600, 'EUR', '2021-04-13 20:58:51', '2021-05-25 06:45:14'),
+(6, 'Q12', 'Q12', 'Sectors', 109, 276, 39, 165, 'none', 0, 950, 1200, 1400, 1600, 'EUR', '2021-04-13 22:04:52', '2021-05-25 06:45:51'),
+(7, 'Q13', 'Q13', 'Sectors', 139, 274, 53, 169, 'none', 0, 950, 1200, 1400, 1600, 'EUR', '2021-04-16 07:35:40', '2021-05-25 06:46:57'),
+(8, 'Q14', 'Q14', 'Sectors', 165, 274, 58, 159, 'none', 0, 950, 1200, 1400, 1600, 'EUR', '2021-04-16 07:52:38', '2021-05-25 06:47:15'),
+(9, 'Q21', 'Q21', 'Sectors', 83, 302, 30, 175, 'none', -1, 900, 1150, 1350, 1550, 'EUR', '2021-04-16 07:53:37', '2021-05-25 06:47:35'),
+(10, 'Q22', 'Q22', 'Sectors', 110, 301, 40, 176, 'none', 0, 900, 1150, 1350, 1550, 'EUR', '2021-04-16 07:54:18', '2021-05-25 06:48:02'),
+(11, 'Q23', 'Q23', 'Sectors', 139, 300, 53, 176, 'none', 0, 900, 1150, 1350, 1550, 'EUR', '2021-04-16 07:54:47', '2021-05-25 06:48:17'),
+(12, 'Q24', 'Q24', 'Sectors', 165, 299, 62, 174, 'none', 0, 900, 1150, 1350, 1550, 'EUR', '2021-04-16 07:55:17', '2021-05-25 06:48:33'),
+(13, 'Q31', 'Q31', 'Sectors', 86, 338, 34, 194, 'none', 0, 850, 1100, 1300, 1500, 'EUR', '2021-04-16 07:56:14', '2021-05-25 06:48:46'),
+(14, 'Q32', 'Q32', 'Sectors', 113, 337, 45, 193, 'none', 0, 850, 1100, 1300, 1500, 'EUR', '2021-04-16 07:56:52', '2021-05-25 06:49:01'),
+(15, 'Q33', 'Q33', 'Sectors', 141, 335, 55, 191, 'none', 0, 850, 1100, 1300, 1500, 'EUR', '2021-04-16 07:57:25', '2021-05-25 06:50:58'),
+(16, 'Q34', 'Q34', 'Sectors', 165, 333, 65, 196, 'none', 0, 850, 1100, 1300, 1500, 'EUR', '2021-04-16 07:57:58', '2021-05-25 06:51:17'),
+(17, 'Q41', 'Q41', 'Sectors', 88, 368, 33, 215, 'none', 0, 800, 1050, 1250, 1450, 'EUR', '2021-04-16 07:58:23', '2021-05-25 06:51:35'),
+(18, 'Q42', 'Q42', 'Sectors', 115, 368, 44, 216, 'none', 0, 800, 1050, 1250, 1450, 'EUR', '2021-04-16 08:01:01', '2021-05-25 06:51:51'),
+(19, 'Q43', 'Q43', 'Sectors', 146, 366, 56, 212, 'none', 0, 800, 1050, 1250, 1450, 'EUR', '2021-04-16 08:01:31', '2021-05-25 06:52:05'),
+(20, 'Q44', 'Q44', 'Sectors', 170, 364, 65, 213, 'none', 0, 800, 1050, 1250, 1450, 'EUR', '2021-04-16 08:01:55', '2021-05-25 06:52:20'),
 (21, 'R11', 'R11', 'Sectors', 195, 272, 71, 162, 'none', 0, 1000, 1250, 1450, 1650, 'EUR', '2021-04-16 08:03:12', '2021-04-16 08:03:12'),
-(22, 'R12', 'R12', 'Sectors', 223, 272, 86, 163, 'none', 0, 1000, 1250, 1450, 1650, 'EUR', '2021-04-16 08:08:49', '2021-04-19 06:35:59'),
+(22, 'R12', 'R12', 'Sectors', 224, 269, 86, 163, 'none', 0, 1000, 1250, 1450, 1650, 'EUR', '2021-04-16 08:08:49', '2021-05-25 06:52:45'),
 (23, 'S11', 'S11', 'Sectors', 321, 262, 121, 152, 'none', 0, 1050, 1300, 1500, 1700, 'EUR', '2021-04-16 08:09:01', '2021-04-16 08:09:01'),
 (24, 'S12', 'S12', 'Sectors', 351, 260, 133, 149, 'none', 0, 1050, 1300, 1500, 1700, 'EUR', '2021-04-16 08:09:46', '2021-04-16 08:09:46'),
-(26, 'S13', 'S13', 'Sectors', 382, 255, 143, 147, 'none', 0, 1050, 1300, 1500, 1700, 'EUR', '2021-04-16 08:10:21', '2021-04-16 08:10:21'),
-(27, 'S14', 'S14', 'Sectors', 410, 255, 154, 145, 'none', 0, 1050, 1300, 1500, 1700, 'EUR', '2021-04-16 08:10:43', '2021-04-27 08:45:32'),
+(26, 'S13', 'S13', 'Sectors', 380, 255, 143, 147, 'none', 0, 1050, 1300, 1500, 1700, 'EUR', '2021-04-16 08:10:21', '2021-05-25 06:57:35'),
+(27, 'S14', 'S14', 'Sectors', 409, 253, 154, 145, 'none', 0, 1050, 1300, 1500, 1700, 'EUR', '2021-04-16 08:10:43', '2021-05-25 06:57:47'),
 (28, 'S21', 'S21', 'Sectors', 326, 289, 123, 165, 'none', 0, 1000, 1250, 1450, 1650, 'EUR', '2021-04-16 08:11:44', '2021-04-16 08:11:44'),
 (29, 'S22', 'S22', 'Sectors', 355, 285, 134, 163, 'none', 0, 1000, 1250, 1450, 1650, 'EUR', '2021-04-16 08:12:07', '2021-04-16 08:12:07'),
-(30, 'R13', 'R13', 'Sectors', 254, 272, 94, 158, 'none', 0, 1000, 1250, 1450, 1650, 'EUR', '2021-04-16 08:12:27', '2021-04-27 08:26:25'),
+(30, 'R13', 'R13', 'Sectors', 257, 270, 94, 158, 'none', 0, 1000, 1250, 1450, 1650, 'EUR', '2021-04-16 08:12:27', '2021-05-25 06:52:58'),
 (31, 'S23', 'S23', 'Sectors', 384, 280, 146, 162, 'none', 0, 1000, 1250, 1450, 1650, 'EUR', '2021-04-16 08:12:45', '2021-04-16 08:12:45'),
-(32, 'S24', 'S24', 'Sectors', 412, 277, 157, 159, 'none', 0, 1000, 1250, 1450, 1650, 'EUR', '2021-04-16 08:13:06', '2021-04-27 08:44:18'),
+(32, 'S24', 'S24', 'Sectors', 410, 282, 157, 159, 'none', 0, 1000, 1250, 1450, 1650, 'EUR', '2021-04-16 08:13:06', '2021-05-25 06:58:23'),
 (33, 'S31', 'S31', 'Sectors', 328, 326, 124, 187, 'none', 0, 950, 1200, 1400, 1600, 'EUR', '2021-04-16 08:13:50', '2021-04-16 08:13:50'),
 (34, 'S32', 'S32', 'Sectors', 353, 323, 135, 186, 'none', 0, 950, 1200, 1400, 1600, 'EUR', '2021-04-16 08:14:09', '2021-04-16 08:27:38'),
 (35, 'R14', 'R14', 'Sectors', 280, 267, 104, 158, 'none', 0, 1000, 1250, 1450, 1650, 'EUR', '2021-04-16 08:14:39', '2021-04-27 08:28:43'),
-(36, 'S33', 'S33', 'Sectors', 391, 321, 148, 182, 'none', 0, 950, 1200, 1400, 1600, 'EUR', '2021-04-16 08:14:39', '2021-04-16 08:14:39'),
-(37, 'S34', 'S34', 'Sectors', 418, 316, 158, 183, 'none', 0, 950, 1200, 1400, 1600, 'EUR', '2021-04-16 08:14:59', '2021-04-16 08:14:59'),
-(38, 'S41', 'S41', 'Sectors', 333, 359, 125, 208, 'none', 0, 900, 1150, 1350, 1550, 'EUR', '2021-04-16 08:15:20', '2021-04-16 08:15:20'),
-(39, 'S42', 'S42', 'Sectors', 360, 356, 185, 193, 'none', 0, 900, 1150, 1350, 1550, 'EUR', '2021-04-16 08:15:45', '2021-04-16 08:15:45'),
-(40, 'S43', 'S43', 'Sectors', 394, 345, 149, 200, 'none', 0, 900, 1150, 1350, 1550, 'EUR', '2021-04-16 08:16:20', '2021-04-16 08:16:20'),
+(36, 'S33', 'S33', 'Sectors', 383, 320, 148, 182, 'none', 0, 950, 1200, 1400, 1600, 'EUR', '2021-04-16 08:14:39', '2021-05-25 06:59:42'),
+(37, 'S34', 'S34', 'Sectors', 414, 316, 158, 183, 'none', 0, 950, 1200, 1400, 1600, 'EUR', '2021-04-16 08:14:59', '2021-05-25 07:00:04'),
+(38, 'S41', 'S41', 'Sectors', 330, 358, 125, 208, 'none', 0, 900, 1150, 1350, 1550, 'EUR', '2021-04-16 08:15:20', '2021-05-25 07:00:16'),
+(39, 'S42', 'S42', 'Sectors', 359, 356, 185, 193, 'none', 0, 900, 1150, 1350, 1550, 'EUR', '2021-04-16 08:15:45', '2021-05-25 07:00:30'),
+(40, 'S43', 'S43', 'Sectors', 390, 350, 149, 200, 'none', 0, 900, 1150, 1350, 1550, 'EUR', '2021-04-16 08:16:20', '2021-05-25 07:00:44'),
 (41, 'R21', 'R21', 'Sectors', 193, 302, 72, 179, 'none', 0, 950, 1200, 1400, 1600, 'EUR', '2021-04-16 08:16:29', '2021-04-16 08:16:29'),
-(42, 'S44', 'S44', 'Sectors', 421, 343, 160, 198, 'none', 0, 900, 1150, 1350, 1550, 'EUR', '2021-04-16 08:16:46', '2021-04-16 08:16:46'),
+(42, 'S44', 'S44', 'Sectors', 419, 344, 160, 198, 'none', 0, 900, 1150, 1350, 1550, 'EUR', '2021-04-16 08:16:46', '2021-05-25 07:01:03'),
 (43, 'V11', 'V11', 'Sectors', 557, 224, 210, 127, 'none', 0, 1150, 1400, 1600, 1800, 'EUR', '2021-04-16 08:18:04', '2021-04-16 08:18:04'),
-(44, 'R22', 'R22', 'Sectors', 222, 298, 81, 176, 'none', 0, 950, 1200, 1400, 1600, 'EUR', '2021-04-16 08:18:27', '2021-04-27 08:42:24'),
+(44, 'R22', 'R22', 'Sectors', 227, 301, 81, 176, 'none', 0, 950, 1200, 1400, 1600, 'EUR', '2021-04-16 08:18:27', '2021-05-25 06:54:34'),
 (45, 'V12', 'V12', 'Sectors', 581, 215, 220, 121, 'none', 0, 1150, 1400, 1600, 1800, 'EUR', '2021-04-16 08:18:32', '2021-04-27 09:01:59'),
 (46, 'V13', 'V13', 'Sectors', 607, 203, 229, 117, 'none', 0, 1150, 1400, 1600, 1800, 'EUR', '2021-04-16 08:19:11', '2021-04-16 08:19:11'),
 (47, 'R23', 'R23', 'Sectors', 258, 297, 95, 175, 'none', 0, 950, 1200, 1400, 1600, 'EUR', '2021-04-16 08:19:23', '2021-04-27 08:43:31'),
 (48, 'V14', 'V14', 'Sectors', 636, 196, 239, 113, 'none', 0, 1150, 1400, 1600, 1800, 'EUR', '2021-04-16 08:19:32', '2021-04-27 08:36:22'),
 (49, 'V21', 'V21', 'Sectors', 561, 244, 211, 138, 'none', 0, 1100, 1350, 1550, 1750, 'EUR', '2021-04-16 08:20:11', '2021-04-16 08:21:30'),
 (50, 'R24', 'R24', 'Sectors', 285, 297, 106, 174, 'none', 0, 950, 1200, 1400, 1600, 'EUR', '2021-04-16 08:20:28', '2021-04-19 06:38:30'),
-(51, 'V22', 'V22', 'Sectors', 589, 234, 223, 133, 'none', 0, 1100, 1350, 1550, 1750, 'EUR', '2021-04-16 08:20:34', '2021-04-16 08:21:58'),
+(51, 'V22', 'V22', 'Sectors', 585, 236, 223, 133, 'none', 0, 1100, 1350, 1550, 1750, 'EUR', '2021-04-16 08:20:34', '2021-05-25 07:05:51'),
 (52, 'V23', 'V23', 'Sectors', 619, 229, 234, 128, 'none', 0, 1100, 1350, 1550, 1750, 'EUR', '2021-04-16 08:22:39', '2021-04-27 08:59:22'),
 (53, 'R31', 'R31', 'Sectors', 198, 337, 72, 196, 'none', 0, 900, 1150, 1350, 1550, 'EUR', '2021-04-16 08:22:49', '2021-04-19 06:49:11'),
-(54, 'V24', 'V24', 'Sectors', 646, 217, 243, 123, 'none', 0, 1100, 1350, 1550, 1750, 'EUR', '2021-04-16 08:23:01', '2021-04-27 08:58:45'),
-(55, 'V31', 'V31', 'Sectors', 574, 278, 216, 160, 'none', 0, 1050, 1300, 1500, 1700, 'EUR', '2021-04-16 08:23:25', '2021-04-16 08:23:25'),
-(56, 'V32', 'V32', 'Sectors', 604, 269, 226, 157, 'none', 0, 1050, 1300, 1500, 1750, 'EUR', '2021-04-16 08:23:47', '2021-04-27 08:57:50'),
-(57, 'V33', 'V33', 'Sectors', 631, 262, 239, 148, 'none', 0, 1050, 1300, 1500, 1750, 'EUR', '2021-04-16 08:24:07', '2021-04-20 08:14:32'),
+(54, 'V24', 'V24', 'Sectors', 641, 217, 243, 123, 'none', 0, 1100, 1350, 1550, 1750, 'EUR', '2021-04-16 08:23:01', '2021-05-25 07:07:33'),
+(55, 'V31', 'V31', 'Sectors', 571, 281, 216, 160, 'none', 0, 1050, 1300, 1500, 1700, 'EUR', '2021-04-16 08:23:25', '2021-05-25 07:07:50'),
+(56, 'V32', 'V32', 'Sectors', 599, 273, 226, 157, 'none', 0, 1050, 1300, 1500, 1750, 'EUR', '2021-04-16 08:23:47', '2021-05-25 07:08:09'),
+(57, 'V33', 'V33', 'Sectors', 628, 264, 239, 148, 'none', 0, 1050, 1300, 1500, 1750, 'EUR', '2021-04-16 08:24:07', '2021-05-25 07:08:45'),
 (58, 'R32', 'R32', 'Sectors', 226, 338, 82, 197, 'none', 0, 900, 1150, 1350, 1550, 'EUR', '2021-04-16 08:24:30', '2021-04-19 06:49:33'),
-(59, 'V34', 'V34', 'Sectors', 657, 251, 249, 142, 'none', 0, 1050, 1300, 1500, 1700, 'EUR', '2021-04-16 08:24:33', '2021-04-16 08:24:33'),
+(59, 'V34', 'V34', 'Sectors', 656, 254, 249, 142, 'none', 0, 1050, 1300, 1500, 1700, 'EUR', '2021-04-16 08:24:33', '2021-05-25 07:09:05'),
 (60, 'V41', 'V41', 'Sectors', 582, 312, 219, 178, 'none', 0, 1000, 1250, 1450, 1650, 'EUR', '2021-04-16 08:24:59', '2021-04-16 08:24:59'),
 (61, 'V42', 'V42', 'Sectors', 605, 301, 230, 172, 'none', 0, 1000, 1250, 1450, 1650, 'EUR', '2021-04-16 08:25:20', '2021-04-16 08:25:20'),
-(62, 'V43', 'V43', 'Sectors', 641, 291, 244, 163, 'none', 0, 1000, 1250, 1450, 1650, 'EUR', '2021-04-16 08:25:57', '2021-04-16 08:25:57'),
+(62, 'V43', 'V43', 'Sectors', 638, 294, 244, 163, 'none', 0, 1000, 1250, 1450, 1650, 'EUR', '2021-04-16 08:25:57', '2021-05-25 07:09:34'),
 (63, 'R33', 'R33', 'Sectors', 257, 335, 95, 196, 'none', 0, 900, 1150, 1350, 1550, 'EUR', '2021-04-16 08:25:58', '2021-04-16 08:25:58'),
-(64, 'V44', 'V44', 'Sectors', 669, 279, 255, 162, 'none', 0, 1000, 1250, 1450, 1650, 'EUR', '2021-04-16 08:26:15', '2021-04-16 08:26:15'),
+(64, 'V44', 'V44', 'Sectors', 667, 285, 255, 162, 'none', 0, 1000, 1250, 1450, 1650, 'EUR', '2021-04-16 08:26:15', '2021-05-25 07:09:54'),
 (65, 'R34', 'R34', 'Sectors', 287, 329, 107, 193, 'none', 0, 900, 1150, 1350, 1550, 'EUR', '2021-04-16 08:27:18', '2021-04-16 08:28:02'),
 (66, 'R41', 'R41', 'Sectors', 198, 368, 73, 216, 'none', 0, 850, 1100, 1300, 1500, 'EUR', '2021-04-16 08:28:56', '2021-04-16 08:30:14'),
 (67, 'R42', 'R42', 'Sectors', 224, 366, 83, 215, 'none', 0, 850, 1100, 1300, 1500, 'EUR', '2021-04-16 08:29:58', '2021-04-27 08:44:15'),
@@ -375,23 +384,23 @@ INSERT INTO `places` (`id`, `place_id`, `place_name`, `map_name`, `co_xl`, `co_y
 (86, 'X11', 'X11', 'Sectors', 659, 183, 248, 109, 'none', 0, 1200, 1450, 1650, 1850, 'EUR', '2021-04-16 08:50:36', '2021-04-16 08:50:36'),
 (87, 'X12', 'X12', 'Sectors', 687, 171, 257, 101, 'none', 0, 1200, 1450, 1650, 1850, 'EUR', '2021-04-16 08:51:28', '2021-04-16 08:51:28'),
 (88, 'X13', 'X13', 'Sectors', 712, 160, 267, 96, 'none', 0, 1200, 1450, 1650, 1850, 'EUR', '2021-04-16 08:52:11', '2021-04-27 08:56:29'),
-(89, 'X14', 'X14', 'Sectors', 737, 145, 278, 90, 'none', 0, 1200, 1450, 1650, 1850, 'EUR', '2021-04-16 08:52:48', '2021-04-27 08:57:05'),
+(89, 'X14', 'X14', 'Sectors', 739, 148, 278, 90, 'none', 0, 1200, 1450, 1650, 1850, 'EUR', '2021-04-16 08:52:48', '2021-05-25 07:11:42'),
 (90, 'X21', 'X21', 'Sectors', 671, 205, 251, 122, 'none', 0, 1150, 1400, 1600, 1800, 'EUR', '2021-04-16 08:53:57', '2021-04-16 08:53:57'),
 (91, 'X22', 'X22', 'Sectors', 696, 192, 259, 116, 'none', 0, 1150, 1400, 1600, 1800, 'EUR', '2021-04-16 08:54:32', '2021-04-16 08:54:32'),
-(92, 'X23', 'X23', 'Sectors', 725, 178, 282, 100, 'none', 0, 1150, 1400, 1600, 1800, 'EUR', '2021-04-16 08:55:08', '2021-04-16 08:55:08'),
-(93, 'X24', 'X24', 'Sectors', 752, 167, 282, 101, 'none', 0, 1150, 1400, 1600, 1800, 'EUR', '2021-04-16 08:55:58', '2021-04-16 08:55:58'),
+(92, 'X23', 'X23', 'Sectors', 726, 180, 282, 100, 'none', 0, 1150, 1400, 1600, 1800, 'EUR', '2021-04-16 08:55:08', '2021-05-25 07:12:25'),
+(93, 'X24', 'X24', 'Sectors', 751, 168, 282, 101, 'none', 0, 1150, 1400, 1600, 1800, 'EUR', '2021-04-16 08:55:58', '2021-05-25 07:12:42'),
 (94, 'X31', 'X31', 'Sectors', 687, 240, 258, 144, 'none', 0, 1100, 1350, 1550, 1750, 'EUR', '2021-04-16 08:57:38', '2021-04-28 07:20:17'),
 (95, 'X32', 'X32', 'Sectors', 714, 231, 268, 136, 'none', 0, 1100, 1350, 1550, 1750, 'EUR', '2021-04-16 08:58:43', '2021-04-16 08:58:43'),
 (96, 'X33', 'X33', 'Sectors', 744, 216, 280, 128, 'none', 0, 1100, 1350, 1550, 1750, 'EUR', '2021-04-16 08:59:27', '2021-04-16 08:59:27'),
-(97, 'X34', 'X34', 'Sectors', 769, 201, 289, 121, 'none', 0, 1100, 1350, 1550, 1750, 'EUR', '2021-04-16 09:00:02', '2021-04-16 09:00:02'),
+(97, 'X34', 'X34', 'Sectors', 771, 209, 289, 121, 'none', 0, 1100, 1350, 1550, 1750, 'EUR', '2021-04-16 09:00:02', '2021-05-25 07:14:19'),
 (98, 'X41', 'X41', 'Sectors', 697, 270, 261, 160, 'none', 0, 1050, 1300, 1500, 1700, 'EUR', '2021-04-16 09:01:21', '2021-04-28 07:20:21'),
 (99, 'X42', 'X42', 'Sectors', 723, 257, 270, 152, 'none', 0, 1050, 1300, 1500, 1700, 'EUR', '2021-04-16 09:02:08', '2021-04-16 09:02:08'),
 (100, 'X43', 'X43', 'Sectors', 759, 243, 286, 144, 'none', 0, 1050, 1300, 1500, 1700, 'EUR', '2021-04-16 09:02:43', '2021-04-16 09:02:43'),
-(101, 'X44', 'X44', 'Sectors', 784, 229, 295, 137, 'none', 0, 1050, 1300, 1500, 1700, 'EUR', '2021-04-16 09:03:16', '2021-04-16 09:03:16'),
-(102, 'X15', 'X15', 'Sectors', 759, 141, 285, 86, 'none', 0, 1200, 1450, 1650, 1850, 'EUR', '2021-04-26 13:51:08', '2021-04-26 18:22:58'),
-(104, 'X25', 'X25', 'Sectors', 770, 161, 291, 100, 'none', 0, 1150, 1400, 1600, 1800, 'EUR', '2021-04-26 13:52:20', '2021-04-26 18:22:21'),
-(105, 'X35', 'X35', 'Sectors', 787, 196, 300, 115, 'none', 0, 1100, 1350, 1550, 1750, 'EUR', '2021-04-26 13:53:20', '2021-04-26 18:21:41'),
-(106, 'X45', 'X45', 'Sectors', 803, 225, 301, 132, 'none', 0, 1050, 1300, 1500, 1700, 'EUR', '2021-04-26 13:53:47', '2021-04-26 18:22:27');
+(101, 'X44', 'X44', 'Sectors', 786, 234, 295, 137, 'none', 0, 1050, 1300, 1500, 1700, 'EUR', '2021-04-16 09:03:16', '2021-05-25 07:15:10'),
+(102, 'X15', 'X15', 'Sectors', 766, 136, 285, 86, 'none', 0, 1200, 1450, 1650, 1850, 'EUR', '2021-04-26 13:51:08', '2021-05-25 07:11:58'),
+(104, 'X25', 'X25', 'Sectors', 775, 155, 291, 100, 'none', 0, 1150, 1400, 1600, 1800, 'EUR', '2021-04-26 13:52:20', '2021-05-25 07:12:57'),
+(105, 'X35', 'X35', 'Sectors', 795, 192, 300, 115, 'none', 0, 1100, 1350, 1550, 1750, 'EUR', '2021-04-26 13:53:20', '2021-05-25 07:14:35'),
+(106, 'X45', 'X45', 'Sectors', 811, 220, 301, 132, 'none', 0, 1050, 1300, 1500, 1700, 'EUR', '2021-04-26 13:53:47', '2021-05-25 07:15:23');
 
 -- --------------------------------------------------------
 
@@ -411,6 +420,15 @@ CREATE TABLE `promo_codes` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `promo_codes`
+--
+
+INSERT INTO `promo_codes` (`id`, `map_name`, `promo_user`, `promocode`, `promo_type`, `numberofuse`, `discount`, `status`, `created_at`, `updated_at`) VALUES
+(3, 'For All', 'Albergo San Montano', 'smontanosmo74531', 'F2', -1, 100.00, 1, '2021-05-30 10:59:29', '2021-05-30 10:59:29'),
+(4, 'For All', 'Villa Sirena', 'villasirenavsi44331', 'F2', -1, 100.00, 1, '2021-05-30 10:59:55', '2021-05-30 10:59:55'),
+(5, 'For All', 'HOTEL SAN FRANCESCO', 'sfrancescofr74786', 'F2', -1, 100.00, 1, '2021-06-03 08:12:47', '2021-06-03 08:12:47');
 
 -- --------------------------------------------------------
 
@@ -445,21 +463,11 @@ CREATE TABLE `setting_admins` (
 --
 -- Dumping data for table `setting_admins`
 --
--- Dumping data for the price setting
--- 15th May to 30th June
-INSERT INTO `setting_admins` (`id`, `max_no_days`, `min_no_days`, `booking_email_content`, `closing_time`, `booking_start`, `booking_end`, `daily_fee`, `season_start`, `season_end`, `status_daily_fee`, `adult1_price`, `adult2_price`, `adult3_price`, `adult4_price`, `adult1_price_weekend`, `adult2_price_weekend`, `adult3_price_weekend`, `adult4_price_weekend`, `created_at`, `updated_at`) VALUES
-(1, 3, 1, '<h2><strong>Congratulazioni</strong> [name], hai prenotato con successo!</h2>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\"><strong>Tracking Number:</strong> [tracking_id]</div>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<table style=\"width:100%\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"width:50.0000%\"><strong>Booking ID:</strong> [booking_id]<br />\r\n			<strong>Check-In:</strong> [checkin_date]</td>\r\n			<td style=\"width:50.0000%\"><br />\r\n			<strong>Check-Out:</strong> [checkout_date]</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<table style=\"width:100%\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"width:50.0000%\">\r\n			<p><strong>Nome Cognome:</strong> [name]</p>\r\n\r\n			<p><strong>Email:</strong> [user_email]</p>\r\n\r\n			<p><strong>Telefono:</strong> [user_phone]</p>\r\n\r\n			<p><strong>Numero adulti:</strong> [no_of_adults]</p>\r\n\r\n			<p><strong>Numero bambini:</strong> [no_of_babies]</p>\r\n\r\n			<p><strong>Tipo di pagamento:</strong> [payment_type]</p>\r\n\r\n			<p><strong>Prezzo totale: </strong>[total_amount]&nbsp;&euro;</p>\r\n			</td>\r\n			<td style=\"width:50.0000%\"><strong>Place ID:</strong> [place_id]<br />\r\n			<strong>Place Name:</strong> [place_name]<br />\r\n			&nbsp;</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Thank You,<br />\r\n<strong>Spiaggia San Montano</strong> Admin.</p>', '17:30:00', '2021-05-13 12:00:00', '2021-06-30 23:59:00', 5.00, '2021-05-15', '2021-06-30', 1, 28.00, 35.50, 43.00, 50.50, 28.00, 35.50, 43.00, 50.50, NULL, '2021-05-14 07:26:30');
 
--- 1st July to 31st July
 INSERT INTO `setting_admins` (`id`, `max_no_days`, `min_no_days`, `booking_email_content`, `closing_time`, `booking_start`, `booking_end`, `daily_fee`, `season_start`, `season_end`, `status_daily_fee`, `adult1_price`, `adult2_price`, `adult3_price`, `adult4_price`, `adult1_price_weekend`, `adult2_price_weekend`, `adult3_price_weekend`, `adult4_price_weekend`, `created_at`, `updated_at`) VALUES
-(2, 3, 1, '<h2><strong>Congratulazioni</strong> [name], hai prenotato con successo!</h2>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\"><strong>Tracking Number:</strong> [tracking_id]</div>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<table style=\"width:100%\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"width:50.0000%\"><strong>Booking ID:</strong> [booking_id]<br />\r\n			<strong>Check-In:</strong> [checkin_date]</td>\r\n			<td style=\"width:50.0000%\"><br />\r\n			<strong>Check-Out:</strong> [checkout_date]</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<table style=\"width:100%\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"width:50.0000%\">\r\n			<p><strong>Nome Cognome:</strong> [name]</p>\r\n\r\n			<p><strong>Email:</strong> [user_email]</p>\r\n\r\n			<p><strong>Telefono:</strong> [user_phone]</p>\r\n\r\n			<p><strong>Numero adulti:</strong> [no_of_adults]</p>\r\n\r\n			<p><strong>Numero bambini:</strong> [no_of_babies]</p>\r\n\r\n			<p><strong>Tipo di pagamento:</strong> [payment_type]</p>\r\n\r\n			<p><strong>Prezzo totale: </strong>[total_amount]&nbsp;&euro;</p>\r\n			</td>\r\n			<td style=\"width:50.0000%\"><strong>Place ID:</strong> [place_id]<br />\r\n			<strong>Place Name:</strong> [place_name]<br />\r\n			&nbsp;</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Thank You,<br />\r\n<strong>Spiaggia San Montano</strong> Admin.</p>', '17:30:00', '2021-07-01 12:00:00', '2021-07-31 23:59:00', 5.00, '2021-07-01', '2021-07-31', 1, 31.00, 40.00, 49.00, 56.00, 53.00, 53.00, 56.00, 59.00, NULL, '2021-05-14 07:26:30');
-
--- 1st August to 31st August
-INSERT INTO `setting_admins` (`id`, `max_no_days`, `min_no_days`, `booking_email_content`, `closing_time`, `booking_start`, `booking_end`, `daily_fee`, `season_start`, `season_end`, `status_daily_fee`, `adult1_price`, `adult2_price`, `adult3_price`, `adult4_price`, `adult1_price_weekend`, `adult2_price_weekend`, `adult3_price_weekend`, `adult4_price_weekend`, `created_at`, `updated_at`) VALUES
-(3, 3, 1, '<h2><strong>Congratulazioni</strong> [name], hai prenotato con successo!</h2>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\"><strong>Tracking Number:</strong> [tracking_id]</div>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<table style=\"width:100%\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"width:50.0000%\"><strong>Booking ID:</strong> [booking_id]<br />\r\n			<strong>Check-In:</strong> [checkin_date]</td>\r\n			<td style=\"width:50.0000%\"><br />\r\n			<strong>Check-Out:</strong> [checkout_date]</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<table style=\"width:100%\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"width:50.0000%\">\r\n			<p><strong>Nome Cognome:</strong> [name]</p>\r\n\r\n			<p><strong>Email:</strong> [user_email]</p>\r\n\r\n			<p><strong>Telefono:</strong> [user_phone]</p>\r\n\r\n			<p><strong>Numero adulti:</strong> [no_of_adults]</p>\r\n\r\n			<p><strong>Numero bambini:</strong> [no_of_babies]</p>\r\n\r\n			<p><strong>Tipo di pagamento:</strong> [payment_type]</p>\r\n\r\n			<p><strong>Prezzo totale: </strong>[total_amount]&nbsp;&euro;</p>\r\n			</td>\r\n			<td style=\"width:50.0000%\"><strong>Place ID:</strong> [place_id]<br />\r\n			<strong>Place Name:</strong> [place_name]<br />\r\n			&nbsp;</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Thank You,<br />\r\n<strong>Spiaggia San Montano</strong> Admin.</p>', '17:30:00', '2021-08-01 12:00:00', '2021-08-31 23:59:00', 5.00, '2021-08-01', '2021-08-31', 1, 53.00, 53.00, 56.00, 59.00, 53.00, 53.00, 56.00, 59.00, NULL, '2021-05-14 07:26:30');
-
--- 1st September to closing
-INSERT INTO `setting_admins` (`id`, `max_no_days`, `min_no_days`, `booking_email_content`, `closing_time`, `booking_start`, `booking_end`, `daily_fee`, `season_start`, `season_end`, `status_daily_fee`, `adult1_price`, `adult2_price`, `adult3_price`, `adult4_price`, `adult1_price_weekend`, `adult2_price_weekend`, `adult3_price_weekend`, `adult4_price_weekend`, `created_at`, `updated_at`) VALUES
+(1, 3, 1, '<h2><strong>Congratulazioni</strong> [name], hai prenotato con successo!</h2>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\"><strong>Tracking Number:</strong> [tracking_id]</div>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<table style=\"width:100%\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"width:50.0000%\"><strong>Booking ID:</strong> [booking_id]<br />\r\n			<strong>Check-In:</strong> [checkin_date]</td>\r\n			<td style=\"width:50.0000%\"><br />\r\n			<strong>Check-Out:</strong> [checkout_date]</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<table style=\"width:100%\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"width:50.0000%\">\r\n			<p><strong>Nome Cognome:</strong> [name]</p>\r\n\r\n			<p><strong>Email:</strong> [user_email]</p>\r\n\r\n			<p><strong>Telefono:</strong> [user_phone]</p>\r\n\r\n			<p><strong>Numero adulti:</strong> [no_of_adults]</p>\r\n\r\n			<p><strong>Numero bambini:</strong> [no_of_babies]</p>\r\n\r\n			<p><strong>Tipo di pagamento:</strong> [payment_type]</p>\r\n\r\n			<p><strong>Prezzo totale: </strong>[total_amount]&nbsp;&euro;</p>\r\n			</td>\r\n			<td style=\"width:50.0000%\"><strong>Place ID:</strong> [place_id]<br />\r\n			<strong>Place Name:</strong> [place_name]<br />\r\n			&nbsp;</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Thank You,<br />\r\n<strong>Spiaggia San Montano</strong> Admin.</p>', '17:30:00', '2021-05-13 12:00:00', '2021-06-30 23:59:00', 5.00, '2021-05-15', '2021-06-30', 1, 28.00, 35.50, 43.00, 50.50, 28.00, 35.50, 43.00, 50.50, NULL, '2021-05-14 07:26:30'),
+(2, 3, 1, '<h2><strong>Congratulazioni</strong> [name], hai prenotato con successo!</h2>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\"><strong>Tracking Number:</strong> [tracking_id]</div>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<table style=\"width:100%\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"width:50.0000%\"><strong>Booking ID:</strong> [booking_id]<br />\r\n			<strong>Check-In:</strong> [checkin_date]</td>\r\n			<td style=\"width:50.0000%\"><br />\r\n			<strong>Check-Out:</strong> [checkout_date]</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<table style=\"width:100%\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"width:50.0000%\">\r\n			<p><strong>Nome Cognome:</strong> [name]</p>\r\n\r\n			<p><strong>Email:</strong> [user_email]</p>\r\n\r\n			<p><strong>Telefono:</strong> [user_phone]</p>\r\n\r\n			<p><strong>Numero adulti:</strong> [no_of_adults]</p>\r\n\r\n			<p><strong>Numero bambini:</strong> [no_of_babies]</p>\r\n\r\n			<p><strong>Tipo di pagamento:</strong> [payment_type]</p>\r\n\r\n			<p><strong>Prezzo totale: </strong>[total_amount]&nbsp;&euro;</p>\r\n			</td>\r\n			<td style=\"width:50.0000%\"><strong>Place ID:</strong> [place_id]<br />\r\n			<strong>Place Name:</strong> [place_name]<br />\r\n			&nbsp;</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Thank You,<br />\r\n<strong>Spiaggia San Montano</strong> Admin.</p>', '17:30:00', '2021-07-01 12:00:00', '2021-07-31 23:59:00', 5.00, '2021-07-01', '2021-07-31', 1, 31.00, 40.00, 49.00, 56.00, 53.00, 53.00, 56.00, 59.00, NULL, '2021-05-14 07:26:30'),
+(3, 3, 1, '<h2><strong>Congratulazioni</strong> [name], hai prenotato con successo!</h2>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\"><strong>Tracking Number:</strong> [tracking_id]</div>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<table style=\"width:100%\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"width:50.0000%\"><strong>Booking ID:</strong> [booking_id]<br />\r\n			<strong>Check-In:</strong> [checkin_date]</td>\r\n			<td style=\"width:50.0000%\"><br />\r\n			<strong>Check-Out:</strong> [checkout_date]</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<table style=\"width:100%\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"width:50.0000%\">\r\n			<p><strong>Nome Cognome:</strong> [name]</p>\r\n\r\n			<p><strong>Email:</strong> [user_email]</p>\r\n\r\n			<p><strong>Telefono:</strong> [user_phone]</p>\r\n\r\n			<p><strong>Numero adulti:</strong> [no_of_adults]</p>\r\n\r\n			<p><strong>Numero bambini:</strong> [no_of_babies]</p>\r\n\r\n			<p><strong>Tipo di pagamento:</strong> [payment_type]</p>\r\n\r\n			<p><strong>Prezzo totale: </strong>[total_amount]&nbsp;&euro;</p>\r\n			</td>\r\n			<td style=\"width:50.0000%\"><strong>Place ID:</strong> [place_id]<br />\r\n			<strong>Place Name:</strong> [place_name]<br />\r\n			&nbsp;</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Thank You,<br />\r\n<strong>Spiaggia San Montano</strong> Admin.</p>', '17:30:00', '2021-08-01 12:00:00', '2021-08-31 23:59:00', 5.00, '2021-08-01', '2021-08-31', 1, 53.00, 53.00, 56.00, 59.00, 53.00, 53.00, 56.00, 59.00, NULL, '2021-05-14 07:26:30'),
 (4, 3, 1, '<h2><strong>Congratulazioni</strong> [name], hai prenotato con successo!</h2>\r\n\r\n<div style=\"background:#eeeeee; border:1px solid #cccccc; padding:5px 10px\"><strong>Tracking Number:</strong> [tracking_id]</div>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<table style=\"width:100%\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"width:50.0000%\"><strong>Booking ID:</strong> [booking_id]<br />\r\n			<strong>Check-In:</strong> [checkin_date]</td>\r\n			<td style=\"width:50.0000%\"><br />\r\n			<strong>Check-Out:</strong> [checkout_date]</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<table style=\"width:100%\">\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"width:50.0000%\">\r\n			<p><strong>Nome Cognome:</strong> [name]</p>\r\n\r\n			<p><strong>Email:</strong> [user_email]</p>\r\n\r\n			<p><strong>Telefono:</strong> [user_phone]</p>\r\n\r\n			<p><strong>Numero adulti:</strong> [no_of_adults]</p>\r\n\r\n			<p><strong>Numero bambini:</strong> [no_of_babies]</p>\r\n\r\n			<p><strong>Tipo di pagamento:</strong> [payment_type]</p>\r\n\r\n			<p><strong>Prezzo totale: </strong>[total_amount]&nbsp;&euro;</p>\r\n			</td>\r\n			<td style=\"width:50.0000%\"><strong>Place ID:</strong> [place_id]<br />\r\n			<strong>Place Name:</strong> [place_name]<br />\r\n			&nbsp;</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>Thank You,<br />\r\n<strong>Spiaggia San Montano</strong> Admin.</p>', '17:30:00', '2021-09-01 12:00:00', '2021-09-30 23:59:00', 5.00, '2021-09-01', '2021-09-30', 1, 28.00, 35.50, 43.00, 50.50, 28.00, 35.50, 43.00, 50.50, NULL, '2021-05-14 07:26:30');
 
 -- --------------------------------------------------------
@@ -633,7 +641,41 @@ INSERT INTO `tempbooking_cards` (`id`, `place_id`, `user_fullname`, `payer_name`
 (233, 'Q12', 'Shaykh Siddique', 'Shaykh Siddique', 'Shaykh Siddique', 'shaykhsiddiqee@gmail.com', '01521306492', 4, 1, 'a', 's', 'd', 'f', NULL, NULL, NULL, '2021-06-13', '2021-06-15', 0, NULL, 'Credit Card', 'negombo_609e58ca7f1617_74218895', '00134868834300516927', 151.50, '2021-05-14 07:02:36', '2021-05-14 07:02:36'),
 (234, 'Q12', 'Shaykh Siddique', 'Shaykh Siddique', 'Shaykh Siddique', 'shaykhsiddiqee@gmail.com', '01521306492', 4, 1, 'a', 's', 'd', 'f', NULL, NULL, NULL, '2021-06-13', '2021-06-15', 0, NULL, 'Credit Card', 'negombo_609e59741fb315_61625999', '00134892716300517553', 151.50, '2021-05-14 07:05:28', '2021-05-14 07:05:28'),
 (235, 'Q12', 'Shaykh Siddique', 'Shaykh Siddique', 'Shaykh Siddique', 'shaykhsiddiqee@gmail.com', '01521306492', 4, 1, 'a', 's', 'd', 'f', NULL, NULL, NULL, '2021-06-13', '2021-06-15', 0, NULL, 'Credit Card', 'negombo_609e5991d28972_12342655', '00134897923300517626', 151.50, '2021-05-14 07:05:56', '2021-05-14 07:05:56'),
-(236, 'Q12', 'Shaykh Siddique', 'Shaykh Siddique', 'Shaykh Siddique', 'shaykhsiddiqee@gmail.com', '01521306492', 4, 1, 'a', 's', 'd', 'f', NULL, NULL, NULL, '2021-06-13', '2021-06-15', 0, NULL, 'Credit Card', 'negombo_609e5a14983607_55928475', '00134744101300517993', 151.50, '2021-05-14 07:08:07', '2021-05-14 07:08:07');
+(236, 'Q12', 'Shaykh Siddique', 'Shaykh Siddique', 'Shaykh Siddique', 'shaykhsiddiqee@gmail.com', '01521306492', 4, 1, 'a', 's', 'd', 'f', NULL, NULL, NULL, '2021-06-13', '2021-06-15', 0, NULL, 'Credit Card', 'negombo_609e5a14983607_55928475', '00134744101300517993', 151.50, '2021-05-14 07:08:07', '2021-05-14 07:08:07'),
+(239, 'Q11', 'Shaykh Siddique', 'Shaykh', 'Shaykh Siddique', 'shaykhsiddique@gmail.com', '01521306492', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-15', '2021-05-15', 0, NULL, 'Credit Card', 'negombo_609e6ab5313eb3_68784883', '00134106029300532212', 28.00, '2021-05-14 12:19:01', '2021-05-14 12:19:01'),
+(240, 'Q11', 'Antonio Gallo', 'Italia / Cosenza', 'Antonio Gallo', '83antoniogallo@gmail.com', '3388851460', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-16', '2021-05-16', 0, NULL, 'Credit Card', 'negombo_609e815ba7a806_67708891', '00134449272300552634', 28.00, '2021-05-14 13:55:40', '2021-05-14 13:55:40'),
+(241, 'Q11', 'Antonio Gallo', 'Italia / Cosenza', 'Antonio Gallo', '83antoniogallo@gmail.com', '3388851460', 2, 0, 'vale vale', NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-15', '2021-05-16', 0, NULL, 'Credit Card', 'negombo_609e88e653fcd8_37455583', '00134649674300559093', 71.00, '2021-05-14 14:27:50', '2021-05-14 14:27:50'),
+(242, 'Q14', 'Antonio Gallo', 'Italia / Cosenza', 'Antonio Gallo', '83antoniogallo@gmail.com', '3388851460', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-15', '2021-05-15', 0, NULL, 'Credit Card', 'negombo_609e8b77a0d6a6_04467908', '00134383498300561330', 28.00, '2021-05-14 14:38:47', '2021-05-14 14:38:47'),
+(243, 'Q14', 'Antonio Gallo', 'Italia / Cosenza', 'Antonio Gallo', '83antoniogallo@gmail.com', '3388851460', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-15', '2021-05-15', 0, NULL, 'Credit Card', 'negombo_609e8b89caa973_90418653', '00134366377300561425', 28.00, '2021-05-14 14:39:06', '2021-05-14 14:39:06'),
+(244, 'R34', 'TEST', 'TEST', 'TEST', 'TEST@TEST', '000 00 00 00', 2, 1, 'TEST', NULL, NULL, 'TEST', NULL, NULL, NULL, '2021-05-25', '2021-05-27', 0, NULL, 'Credit Card', 'negombo_609e8bfc461a90_44181362', '00134927092300561794', 106.50, '2021-05-14 14:41:00', '2021-05-14 14:41:00'),
+(245, 'Q14', 'Antonio Gallo', 'Italia / Cosenza', 'Antonio Gallo', '83antoniogallo@gmail.com', '3388851460', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-15', '2021-05-15', 0, NULL, 'Credit Card', 'negombo_609e8c5caf8f00_43006004', '00134635407300562045', 28.00, '2021-05-14 14:42:37', '2021-05-14 14:42:37'),
+(246, 'Q14', 'Antonio Gallo', 'Italia / Cosenza', 'Antonio Gallo', '83antoniogallo@gmail.com', '3388851460', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-15', '2021-05-15', 0, NULL, 'Credit Card', 'negombo_609e8c6dee12d4_68333803', '00134565228300562073', 28.00, '2021-05-14 14:42:54', '2021-05-14 14:42:54'),
+(247, 'S34', 'TEST', 'TEST', 'TEST', 'TEST@TEST', '00', 4, 1, 'TEST', 'TEST', 'TEST', 'TEST', NULL, NULL, NULL, '2021-06-07', '2021-06-09', 0, NULL, 'Credit Card', 'negombo_609e8c7a1cb7d0_43432325', '00134523924300562146', 151.50, '2021-05-14 14:43:06', '2021-05-14 14:43:06'),
+(248, 'X34', 'TEST', 'TEST', 'TEST', 'TEST@TEST', '0', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-20', '2021-05-22', 0, NULL, 'Credit Card', 'negombo_609e8cbf5c00b0_36793291', '00134136957300562371', 84.00, '2021-05-14 14:44:15', '2021-05-14 14:44:15'),
+(249, 'R13', 'TEST', 'TEST', 'TEST', 'TEST@TEST', '00', 4, 1, 'TEST', 'TEST', 'V', 'TEST', NULL, NULL, NULL, '2021-05-20', '2021-05-22', 0, NULL, 'Credit Card', 'negombo_609e8da590b6a6_47114398', '00134168116300563246', 151.50, '2021-05-14 14:48:05', '2021-05-14 14:48:05'),
+(250, 'T33', 'PETER PAN', 'Peter', 'PETER PAN', 'peterpan@gmail.com', '345 623 4564', 3, 0, 'PEK', 'PEPE', NULL, NULL, NULL, NULL, NULL, '2021-05-30', '2021-05-31', 0, NULL, 'Credit Card', 'negombo_609e8db049b681_91567611', '00134226513300563297', 86.00, '2021-05-14 14:48:16', '2021-05-14 14:48:16'),
+(251, 'Q24', 'TEST', 'TEST', 'TEST', 'TEST@TEXT', '00', 3, 2, 'TEST', 'TEST', NULL, 'TEST', 'TEST', NULL, NULL, '2021-05-15', '2021-05-16', 0, NULL, 'Credit Card', 'negombo_609e8de24f0512_38722243', '00134371505300563482', 86.00, '2021-05-14 14:49:06', '2021-05-14 14:49:06'),
+(252, 'Q11', 'PETER PAN', 'Alicia', 'PETER PAN', 'peterpan@gmail.com', '345 623 4564', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-06-11', '2021-06-11', 0, NULL, 'Credit Card', 'negombo_609e8e3dd2c576_31673808', '00134790030300563862', 28.00, '2021-05-14 14:50:38', '2021-05-14 14:50:38'),
+(253, 'R14', 'Antonio Gallo', 'Italia / Cosenza', 'Antonio Gallo', '83antoniogallo@gmail.com', '3388851460', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-15', '2021-05-15', 0, NULL, 'Credit Card', 'negombo_609e9d766473c2_60564535', '00134444675300578603', 28.00, '2021-05-14 15:55:34', '2021-05-14 15:55:34'),
+(254, 'X11', 'Antonio Gallo', 'Italia / Cosenza', 'Antonio Gallo', '83antoniogallo@gmail.com', '3388851460', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-15', '2021-05-15', 0, NULL, 'Credit Card', 'negombo_609e9da9dfebe7_37352041', '00134947095300578845', 28.00, '2021-05-14 15:56:26', '2021-05-14 15:56:26'),
+(256, 'S11', '1', '1', '1', '1@1', '1', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-23', '2021-05-24', 0, NULL, 'Credit Card', 'negombo_60a759e14b31c2_77514745', '00141357489301741802', 56.00, '2021-05-21 06:57:37', '2021-05-21 06:57:37');
+INSERT INTO `tempbooking_cards` (`id`, `place_id`, `user_fullname`, `payer_name`, `user_surname`, `user_email`, `user_phone`, `user_no_of_guest`, `user_no_of_babies`, `guest_surname1`, `guest_surname2`, `guest_surname3`, `baby_surname1`, `baby_surname2`, `baby_surname3`, `baby_surname4`, `user_checkin`, `user_checkout`, `is_approved`, `user_promo`, `user_payment_type`, `user_booking_tracking_id`, `user_card_paymentid`, `paid_ammount`, `created_at`, `updated_at`) VALUES
+(257, 'X12', 'Antonio Gallo', 'Italia / Cosenza', 'Antonio Gallo', '83antoniogallo@gmail.com', '3388851460', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-23', '2021-05-25', 0, NULL, 'Credit Card', 'negombo_60a78946299467_93339100', '00141884717301789096', 84.00, '2021-05-21 10:19:50', '2021-05-21 10:19:50'),
+(258, 'X45', 'Antonio Gallo', 'Italia / Cosenza', 'Antonio Gallo', '83antoniogallo@gmail.com', '3388851460', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-23', '2021-05-23', 0, NULL, 'Credit Card', 'negombo_60a789729ded92_56655990', '00141694889301789323', 28.00, '2021-05-21 10:20:34', '2021-05-21 10:20:34'),
+(259, 'X45', 'Antonio Gallo', 'Italia / Cosenza', 'Antonio Gallo', '83antoniogallo@gmail.com', '3388851460', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-23', '2021-05-23', 0, NULL, 'Credit Card', 'negombo_60a7898145fde5_63160767', '00141404133301789362', 28.00, '2021-05-21 10:20:49', '2021-05-21 10:20:49'),
+(260, 'X45', 'Antonio Gallo', 'Italia / Cosenza', 'Antonio Gallo', '83antoniogallo@gmail.com', '3388851460', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-23', '2021-05-25', 0, NULL, 'Credit Card', 'negombo_60a7899a062663_90291952', '00141704471301789452', 84.00, '2021-05-21 10:21:14', '2021-05-21 10:21:14'),
+(261, 'T31', 'Federico García Lorca', 'Peter pan', 'Federico García Lorca', 'peterpan@gmail.com', '1', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-23', '2021-05-23', 0, NULL, 'Credit Card', 'negombo_60a78b1fd7d0b0_40418867', '00141214111301791085', 28.00, '2021-05-21 10:27:44', '2021-05-21 10:27:44'),
+(262, 'R22', '1', '1', '1', '1@1', '1', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-27', '2021-05-28', 0, NULL, 'Credit Card', 'negombo_60acb6858d9579_75980446', '00145751846302445793', 56.00, '2021-05-25 08:34:14', '2021-05-25 08:34:14'),
+(263, 'R22', '1', '1', '1', '1@1', '1', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-27', '2021-05-28', 0, NULL, 'Credit Card', 'negombo_60acb70158d7f9_04744481', '00145165085302446367', 56.00, '2021-05-25 08:36:17', '2021-05-25 08:36:17'),
+(264, 'T14', 'GIANLUCA gentile', 'Napoli', 'GIANLUCA gentile', 'ggentile@odcec.napoli.it', '0814207079', 2, 0, 'gentile', NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-31', '2021-05-31', 0, NULL, 'Credit Card', 'negombo_60b1090bdb6093_76901214', '00148749795303149215', 35.50, '2021-05-28 15:15:24', '2021-05-28 15:15:24'),
+(265, 'X12', 'casa', 'zzz', 'casa', 'negombo@negombo.it', '335474935', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-31', '2021-05-31', 0, NULL, 'Credit Card', 'negombo_60b10b47f36185_13846520', '00148373719303151314', 28.00, '2021-05-28 15:24:56', '2021-05-28 15:24:56'),
+(266, 'X11', 'antonio', 'Antonio', 'antonio', 'adecandia@gmail.com', '3200707503', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-05-30', '2021-05-30', 0, NULL, 'Credit Card', 'negombo_60b23c6b164d26_06980466', '00149864295303290676', 28.00, '2021-05-29 13:06:51', '2021-05-29 13:06:51'),
+(269, 'V13', 'Alessandra Susi', 'Alessansra Susi', 'Alessandra Susi', 'susialessandra@gmail.com', '3405848282', 1, 1, NULL, NULL, NULL, 'Pier Giorgio Vuoso', NULL, NULL, NULL, '2021-06-04', '2021-06-04', 0, NULL, 'Credit Card', 'negombo_60b75712478339_53841766', '00153598545304059600', 28.00, '2021-06-02 10:01:54', '2021-06-02 10:01:54'),
+(270, 'R11', 'LAURA LONGOBARDO', 'LAURA LONGOBARDO', 'LAURA LONGOBARDO', 'lauralongo@hotmail.com', '3392086927', 3, 2, 'LUDOVICA COSENTINO', 'MARIO COZZARELLI', NULL, 'PAOLA COZZARELLI', 'MARIA FRANCESCA SABBATINO', NULL, NULL, '2021-06-04', '2021-06-05', 0, NULL, 'Credit Card', 'negombo_60b8ea204c4853_94417779', '00154589249304321693', 86.00, '2021-06-03 14:41:36', '2021-06-03 14:41:36'),
+(271, 'R11', 'LAURA LONGOBARDO', 'LAURA LONGOBARDO', 'LAURA LONGOBARDO', 'lauralongo@hotmail.com', '3392086927', 3, 2, 'MARIO COZZARELLI', 'LUDOVICA COSENTINO', NULL, 'PAOLA COZZARELLI', 'MARIA FRANCESCA SABBATINO', NULL, NULL, '2021-06-04', '2021-06-04', 0, NULL, 'Credit Card', 'negombo_60b8eae9667319_36562098', '00154420970304322457', 43.00, '2021-06-03 14:44:57', '2021-06-03 14:44:57'),
+(273, 'V11', 'Maura Mirandanti', 'Maura Mirandanti', 'Maura Mirandanti', 'miramaura.14@gmail.com', '3334424348', 2, 0, 'Pucci duilio', NULL, NULL, NULL, NULL, NULL, NULL, '2021-06-05', '2021-06-05', 0, NULL, 'Credit Card', 'negombo_60b9147a704d81_57864885', '00154257945304363355', 35.50, '2021-06-03 17:42:19', '2021-06-03 17:42:19'),
+(276, 'S14', 'Fausto izzo', 'Fausto izzo', 'Fausto izzo', 'faustoizzo@tin.it', '3477480024', 2, 0, 'Teresa Esposito', NULL, NULL, NULL, NULL, NULL, NULL, '2021-06-05', '2021-06-05', 0, NULL, 'Credit Card', 'negombo_60b9d5e427d989_87237110', '00155369187304436193', 35.50, '2021-06-04 07:27:32', '2021-06-04 07:27:32'),
+(277, 'Q41', 'Shaykh Siddique', 'Shaykh', 'Shaykh Siddique', 'shaykhsiddiqee@gmail.com', '01521306492', 1, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2021-06-05', '2021-06-05', 0, NULL, 'Credit Card', 'negombo_60ba3473602594_81475295', '00155524098304546063', 28.00, '2021-06-04 14:10:59', '2021-06-04 14:10:59');
 
 -- --------------------------------------------------------
 
@@ -651,17 +693,6 @@ CREATE TABLE `temp_bookings` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `temp_bookings`
---
-
-INSERT INTO `temp_bookings` (`id`, `client_ip`, `place_id`, `user_checkin`, `cookie`, `created`, `created_at`, `updated_at`) VALUES
-(1013, '127.0.0.1', 'Q11', '2021-05-16', 'negombo_609e54f7940b94.36863749', '2021-05-14 12:46:15', '2021-05-14 06:46:15', '2021-05-14 06:46:15'),
-(1014, '127.0.0.1', 'Q13', '2021-06-13', 'negombo_609e55e041a097.18506898', '2021-05-14 12:50:08', '2021-05-14 06:50:08', '2021-05-14 06:50:08'),
-(1015, '127.0.0.1', 'Q12', '2021-06-13', 'negombo_609e56170757b5.64901930', '2021-05-14 12:51:03', '2021-05-14 06:51:03', '2021-05-14 06:51:03'),
-(1016, '127.0.0.1', 'Q12', '2021-06-13', 'negombo_609e568326fd72.18311893', '2021-05-14 12:52:51', '2021-05-14 06:52:51', '2021-05-14 06:52:51'),
-(1017, '127.0.0.1', 'Q12', '2021-06-13', 'negombo_609e586701a8c4.12822974', '2021-05-14 13:00:55', '2021-05-14 07:00:55', '2021-05-14 07:00:55');
 
 -- --------------------------------------------------------
 
@@ -703,13 +734,14 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `role`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(2, 'Programmer', 'shaykhsiddiqee@gmail.com', 'admin', NULL, '$2y$10$MbbL3YBMdasgYNNdPsSYietjNZpeBMSrTzDtheXG4hFZc7EAPInCC', 'ajUBCVx1U2rjK993tGxR7Rqcg3fOSK3Ob4RcOgXbCKymbp0bltPcXtdSAplg', '2020-07-01 20:05:59', '2020-08-04 01:32:33'),
-(12, 'Mario Angelo Iannotta', 'marioiannotta@virgilio.it', 'admin', NULL, '$2y$10$Puk9lMdAwMBRinbBeEp5Ru4/ZO9pL8DZ1WYprC7fabfY//nw5QkXK', 'xc7KHynbea0gtU2KgpyRZFhKHlgnJS2Ii7OZ3Usd9CsWK7xo1UsBdxOaKbwf', '2020-07-19 11:17:45', '2020-07-19 11:17:45'),
-(14, 'Gabriella Pilato', 'backoffice@negombo.it', 'admin', NULL, '$2y$10$Svyt3B0y6uIyL6hsLwtDpuAWpswFUNejw/UD.DolBBhYtR/sMBwWi', 'o831K6hykwEtJ2FC6I9g9JiCcJljzCrMZYjU7KIdAMzS4LjKF2D91JRPZrMc', '2020-07-19 11:20:01', '2020-07-25 19:29:58'),
+(2, 'Programmer', 'shaykhsiddiqee@gmail.com', 'admin', NULL, '$2y$10$MbbL3YBMdasgYNNdPsSYietjNZpeBMSrTzDtheXG4hFZc7EAPInCC', 'RTNAgmKLs7hjDTZ2QASBDEcsuHaTEWaRqkPelIomu3vCi5bk29fSAe2ye06T', '2020-07-01 20:05:59', '2020-08-04 01:32:33'),
+(14, 'Gabriella Pilato', 'backoffice@negombo.it', 'admin', NULL, '$2y$10$Svyt3B0y6uIyL6hsLwtDpuAWpswFUNejw/UD.DolBBhYtR/sMBwWi', 'tJQTeQiYo2E7LrgSvHAmRRT1NTLVJM5HFw7hnfN5jpmu7HShubas7QkMho6g', '2020-07-19 11:20:01', '2020-07-25 19:29:58'),
 (15, 'Antonella Cantaressi', 'negombo@negombo.it', 'staff', NULL, '$2y$10$KGdAWA5JjMq/CcRlde3vwOx/1MTs/IK2V8mjXl8PgSKzI.KKUCBPC', NULL, '2020-07-19 11:21:19', '2020-07-19 11:21:19'),
-(17, 'Antonio Gallo', '83antoniogallo@gmail.com', 'admin', NULL, '$2y$10$exRpAuXOdthKJ5allOjK8ODsprUnxQTSxonSD1RRwtR8AqAn98cHa', 'Ekt2oVdXkSkO6IiuFC3wJ13N54s3gYfxmQEzFqStWvAd7ANQuweYoFf30Qd8', '2020-07-25 18:41:34', '2020-07-25 20:17:25'),
-(18, 'test entrance', 'teststuff@exmpl.com', 'staff', NULL, '$2y$10$0htfigguuqCdLO2c6.TpCeI08DFjkD4IsL4ujMG6JtUX54ZpQTWK2', NULL, '2020-08-02 13:32:29', '2020-08-02 13:32:29'),
-(20, 'Bruno Cernigliaro', 'brc2005@libero.it', 'admin', NULL, '$2y$10$9JCL6HhBjomokgbPXZDDMOdy9t0b7PWufs20jVgcr4xjtCbd2a8lS', NULL, '2020-08-05 23:53:55', '2020-08-05 23:53:55');
+(17, 'Antonio Gallo', '83antoniogallo@gmail.com', 'admin', NULL, '$2y$10$exRpAuXOdthKJ5allOjK8ODsprUnxQTSxonSD1RRwtR8AqAn98cHa', 'aMcylbg2Q7gcLXBfldKFW0ay07ecspR2ntvOwswUeMDifEXGIAZ1syzOLrGp', '2020-07-25 18:41:34', '2020-07-25 20:17:25'),
+(20, 'Bruno Cernigliaro', 'brc2005@libero.it', 'admin', NULL, '$2y$10$9JCL6HhBjomokgbPXZDDMOdy9t0b7PWufs20jVgcr4xjtCbd2a8lS', NULL, '2020-08-05 23:53:55', '2020-08-05 23:53:55'),
+(21, 'Alessandra', 'alessandradipalo24@gmail.com', 'staff', NULL, '$2y$10$3EaGCXV6m6dJ1bbwJFcgz.fpokkmZ/Q3TyPVYe2EDjRJ3t1TkEW3W', 'tFLGEA5OcrBssXBzpixzra7pvjM8gF8QFuYndyFNMjlIJxNUGdo2PNdTzz0s', '2021-05-14 13:04:20', '2021-05-14 17:41:36'),
+(22, 'test', 'test@test.com', 'staff', NULL, '$2y$10$leigu2yrkIeiQneofIHZbeBElumC3jKFaYyY3KSn4Q5dK8K4edsmy', 'zIZVbvRu5ElFXzWTzJrjVB1imMzwYLMbKccurrw6fEdzOwmTEHHUCNC0AtUT', '2021-05-14 14:19:30', '2021-05-14 14:19:50'),
+(23, 'Mario Angelo Iannotta', 'marioiannotta@virgilio.it', 'admin', NULL, '$2y$10$8D7R77NDIyFM1B5IAJIOp.9XElZwbU8XlzmBl/zOyKN.zaB.vcaYe', 'jmCU7pnf3ufMOLOqmACvZPkiYRxyCueNlGfifGjEMBBHqroxCrQgXM2yPDsJ', '2021-06-03 08:01:37', '2021-06-03 08:06:38');
 
 --
 -- Indexes for dumped tables
@@ -806,7 +838,7 @@ ALTER TABLE `bigmapmappings`
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=243;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=281;
 --
 -- AUTO_INCREMENT for table `failed_jobs`
 --
@@ -826,22 +858,22 @@ ALTER TABLE `places`
 -- AUTO_INCREMENT for table `promo_codes`
 --
 ALTER TABLE `promo_codes`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `setting_admins`
 --
 ALTER TABLE `setting_admins`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tempbooking_cards`
 --
 ALTER TABLE `tempbooking_cards`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=239;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=279;
 --
 -- AUTO_INCREMENT for table `temp_bookings`
 --
 ALTER TABLE `temp_bookings`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1020;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1115;
 --
 -- AUTO_INCREMENT for table `trans`
 --
@@ -851,7 +883,7 @@ ALTER TABLE `trans`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- Constraints for dumped tables
 --

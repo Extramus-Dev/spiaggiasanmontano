@@ -23,6 +23,15 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('css/datepicker/t-datepicker.min.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css/datepicker/t-datepicker-green.css') }}">
 
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9KZZPN289Z"></script>
+<script>
+ window.dataLayer = window.dataLayer || [];
+ function gtag(){dataLayer.push(arguments);}
+ gtag('js', new Date());
+ gtag('config', 'G-9KZZPN289Z');
+</script>
+
 
 
 </head>
@@ -125,7 +134,7 @@
           <div class="row">
               <div class="col-md-8 col-sm-6 col-xs-12">
                   <div class="footer-copyright">
-                      <span>Copyright &copy; 2020 All Rights Reserved by <a target="_blank" href="http://www.negombo.it">Negombo</a></span>
+                      <span>Copyright &copy; 2020-2021 All Rights Reserved by <a target="_blank" href="http://www.negombo.it">Negombo</a></span>
                   </div>
               </div>
               <div class="col-md-4 col-sm-6 col-xs-12">

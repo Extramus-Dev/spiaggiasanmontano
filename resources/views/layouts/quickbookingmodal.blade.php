@@ -159,7 +159,7 @@ var date = tomorrow.getFullYear()+'-'+(tomorrow.getMonth()+1)+'-'+tomorrow.getDa
         titleCheckIn   :'{{ __('Check In') }}',
         titleCheckOut  :'{{ __('Check Out') }}',
         numCalendar : 1,
-        startDate: '{{ $set_admin->season_start }}',
+        // startDate: '{{ $set_admin->season_start }}',
         endDate: '{{ $set_admin->season_end }}',
         nextDayHighlighted   :false,
         toDayHighlighted     :false,

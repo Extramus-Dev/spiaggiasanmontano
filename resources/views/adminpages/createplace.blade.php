@@ -1,7 +1,7 @@
 @extends('layouts.adminmaster')
 @section('section')
   <div class="container paddingTop20">
-    <h1>Negombo Add Place</h1>
+    <h1>Spiaggia Add Place</h1>
     <hr>
       @include('layouts.errormessages')
       <div class="row">

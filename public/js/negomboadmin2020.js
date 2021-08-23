@@ -57,20 +57,20 @@ function cnvs_getCoordinates_small(e){
     // data tables
 
     $(document).ready(function() {
-        $('#example_booking').DataTable({
-          "order": [[ 0, "desc" ]],
-          dom: 'lBfrtip',
-          buttons: [
-            'copy', 'csv', 'excel', 'pdf', 'print'
-        ]
-        });
-    } );
+      $('#example_booking').DataTable({
+        "order": [[ 0, "desc" ]],
+        dom: 'lBfrtip',
+        buttons: [
+          'copy', 'csv', 'excel', 'pdf', 'print'
+      ]
+      });
+  } );
 
-    $(document).ready(function() {
-        $('#example').DataTable({
+  $(document).ready(function() {
+      $('#example').DataTable({
 
-        });
-    } );
+      });
+  } );
 
 
 
