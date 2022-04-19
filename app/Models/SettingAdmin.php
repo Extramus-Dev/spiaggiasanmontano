@@ -15,6 +15,13 @@ class SettingAdmin extends Model
 
     public function calculatePrice($place, $checkin, $checkout, $numOfadults){
 
+
+
+      $checkin1 = strtotime($checkin);
+      $checkout2 = strtotime($checkout);
+
+
+
       $numOfdays = date_diff(date_create($checkin), date_create($checkout));
       $numOfdays->d = $this->datediffcount($checkin, $checkout);
       $price_tm = 0;
@@ -41,11 +48,16 @@ class SettingAdmin extends Model
           $numofDaysoutOct =  $numofDaysoct6 ;
 
 
+          $timestamp = strtotime($checkin);
+
+          $daysRemaining = (int)date('t', $timestamp) - (int)date('j', $timestamp);
+
+
+
           if($julyFullOccupied)
             $numofDaysoutOct -= 1;
           $monthCode = date("m", strtotime($checkout));
           $monthCode2 = date("m", strtotime($checkin));
-
 
 
           if($monthCode2 == "06"){
@@ -56,36 +68,113 @@ class SettingAdmin extends Model
           else if ($monthCode2 == "08"){
             $numOfDaysInMonth = 31;
           }
-          else if ($monthCode2 == "09"){
-            $numOfDaysInMonth = 30;
+
+
+
+
+
+          if ($checkin1 >= strtotime("2022-06-01") && $checkin1 <= strtotime("2022-06-30") && $checkout2 <= strtotime("2022-08-31")){
+
+            if($numOfadults == 1){
+              $daysRemaining += 1;
+              echo $daysRemaining;
+              $june_calulation = ($place->price1/ $numOfDaysInMonth) * $daysRemaining;
+              $july_calculation = $place->price1;
+              $august_calcualtion = $place->price1;
+              $price_tm = $june_calulation + $july_calculation + $august_calcualtion;
+            }
+
+            elseif($numOfadults == 2){
+              $daysRemaining += 1;
+              $june_calulation = ($place->price2/ $numOfDaysInMonth) * $daysRemaining;
+              $july_calculation = $place->price2;
+              $august_calcualtion = $place->price2;
+              $price_tm = $june_calulation + $july_calculation + $august_calcualtion;
+            }
+
+            elseif($numOfadults == 3){
+              $daysRemaining += 1;
+              $june_calulation = ($place->price3/ $numOfDaysInMonth) * $daysRemaining;
+              $july_calculation = $place->price3;
+              $august_calcualtion = $place->price3;
+              $price_tm = $june_calulation + $july_calculation + $august_calcualtion;
+            }
+
+            
+            elseif($numOfadults == 4){
+              $daysRemaining += 1;
+              $june_calulation = ($place->price4/ $numOfDaysInMonth) * $daysRemaining;
+              $july_calculation = $place->price4;
+              $august_calcualtion = $place->price4;
+              $price_tm = $june_calulation + $july_calculation + $august_calcualtion;
+            }
+            return round($price_tm);
+
           }
+
+          else if ($checkin1 >= strtotime("2022-07-01") && $checkin1 <= strtotime("2022-07-31") && $checkout2 <= strtotime("2022-08-31")){
+
+            if($numOfadults == 1){
+              echo "here";
+              $daysRemaining += 1;
+              $july_calculation = ($place->price1/ $numOfDaysInMonth) * $daysRemaining;
+              $august_calcualtion = $place->price1;
+              $price_tm = $july_calculation + $august_calcualtion;
+            }
+
+            elseif($numOfadults == 2){
+              $daysRemaining += 1;
+              $july_calculation = ($place->price2/ $numOfDaysInMonth) * $daysRemaining;
+              $august_calcualtion = $place->price2;
+              $price_tm = $july_calculation + $august_calcualtion;
+            }
+
+            elseif($numOfadults == 3){
+              $daysRemaining += 1;
+              $july_calculation = ($place->price3/ $numOfDaysInMonth) * $daysRemaining;
+              $august_calcualtion = $place->price3;
+              $price_tm = $july_calculation + $august_calcualtion;
+            }
+
+            
+            elseif($numOfadults == 4){
+              $daysRemaining += 1;
+              $july_calculation = ($place->price4/ $numOfDaysInMonth) * $daysRemaining;
+              $august_calcualtion = $place->price4;
+              $price_tm = $july_calculation + $august_calcualtion;
+            }
+            return round($price_tm);
+
+          }
+
 
           // price without oct
-          if($numOfadults == 1){
-            $price_tm = (($place->price1)*$numOfdays->m);
-            if(($monthCode == "08" || $monthCode2 == "08") || (intval($monthCode) > 8 && intval($monthCode2) < 8)){
-              $price_tm += $place->price1;
-            }
-          }else if($numOfadults == 2){
-            $price_tm = (($place->price2)*$numOfdays->m);
+      //     if($numOfadults == 1){
+      //       $price_tm = (($place->price1/ $numOfDaysInMonth)*$daysRemaining);
+      //       if(($monthCode == "08" || $monthCode2 == "08") || (intval($monthCode) > 8 && intval($monthCode2) < 8)){
+      //         $price_tm += $place->price1;
+      //       }
+      //     }else if($numOfadults == 2){
+      //       $price_tm = (($place->price2/ $numOfDaysInMonth)*$numofDaysoutOct);
 
-            if(($monthCode == "08" || $monthCode2 == "08") || (intval($monthCode) > 8 && intval($monthCode2) < 8)){
-              $price_tm += $place->price2;
-            }
-          }else if($numOfadults == 3){
-            $price_tm = (($place->price3)*$numOfdays->m);
-            if(($monthCode == "08" || $monthCode2 == "08") || (intval($monthCode) > 8 && intval($monthCode2) < 8)){
-              $price_tm += $place->price3;
-            }
-          }else{
-            $price_tm = (($place->price4)*$numOfdays->m);
-            if(($monthCode == "08" || $monthCode2 == "08") || (intval($monthCode) > 8 && intval($monthCode2) < 8)){
-              $price_tm += $place->price4;
-            }
-          }
-        }
+      //       if(($monthCode == "08" || $monthCode2 == "08") || (intval($monthCode) > 8 && intval($monthCode2) < 8)){
+      //         $price_tm += $place->price2;
+      //       }
+      //     }else if($numOfadults == 3){
+      //       $price_tm = (($place->price3/ $numOfDaysInMonth)*$numofDaysoutOct);
+      //       if(($monthCode == "08" || $monthCode2 == "08") || (intval($monthCode) > 8 && intval($monthCode2) < 8)){
+      //         $price_tm += $place->price3;
+      //       }
+      //     }else{
+      //       $price_tm = (($place->price4/ $numOfDaysInMonth)*$numofDaysoutOct);
+      //       if(($monthCode == "08" || $monthCode2 == "08") || (intval($monthCode) > 8 && intval($monthCode2) < 8)){
+      //         $price_tm += $place->price4;
+      //       }
+      //     }
+      //   }
 
-      return round($price_tm);
+      // return round($price_tm);
+      }
     }
 
 
