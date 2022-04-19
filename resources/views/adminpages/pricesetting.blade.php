@@ -29,7 +29,7 @@
                         <div class="form-group row">
                             <label for="adult1_price" class="col-md-4 col-form-label text-md-right">{{ __('Daily Fee') }}</label>
                             <div class="col-md-6">
-                                <input type="number" step="0.01" class="form-control" name="daily_fee" value="{{ $set_admin[0]->daily_fee }}" disabled required>
+                                <input type="number" step="0.01" class="form-control" name="daily_fee" value="{{ $set_admin[0]->daily_fee }}">
 
                             </div>
                         </div>

@@ -2,6 +2,7 @@
 
 
 
+
 @section('section')
 
   <div class="container-fluid">
@@ -32,9 +33,9 @@
                 </noscript>
                 {{-- <span><strong>{{ __('Arrival day') }}:</strong><span> --}}
                 @isset($maparray['err_msg2'])
-                  <span id="errormsg_txt1" style="color:red;"> {{ __('You have to book for minimum') }} {{ $maparray["set_admin"]->max_no_days }} {{ __('days') }}.</span><br>
+                  <span id="errormsg_txt1" style="color:red;"> {{ __('You have to book for minimum') }} 60 {{ __('days') }}.</span><br>
                 @else
-                  <span id="errormsg_txt1" class="text-primary"> {{ __('You have to book for minimum') }} {{ $maparray["set_admin"]->max_no_days }} {{ __('days') }}.</span><br>
+                  <span id="errormsg_txt1" class="text-primary"> {{ __('You have to book for minimum') }} 60 {{ __('days') }}.</span><br>
                 @endisset
 
                 <span><strong>{{ __('Check-In') }} & {{ __('Check-Out') }}:</strong><span>
@@ -43,12 +44,12 @@
                           @php
                           // for logged in restictioons are removed
                           if(Auth::user()){
-                            $makestr = '+30 day';
+                            $makestr = '+1000 day';
                             $startday = date("Y-m-d");
                             $endday = date("Y-m-d", strtotime($makestr));
                           }else{
                             // for non-logged in user
-                            $makestr = '+'.($maparray["set_admin"]->max_no_days)." day";
+                            $makestr = '+'.($maparray["set_admin"]->max_no_days + 30)." day";
                             $close_h = date('H', strtotime($maparray["set_admin"]->closing_time));
                             $close_hBig = date('H', strtotime($maparray["set_admin"]->closing_time)+60*60);
                             $close_m = date('i', strtotime($maparray["set_admin"]->closing_time));
@@ -71,10 +72,11 @@
                               <span id="t_end" class="t-check-out" onchange="updateMapsubmit()"></span>
                           </div> --}}
                           <input placeholder="⇉ Check-in" class="cal_style" type="text" onfocus="(this.type='date')" id="t_start" name="t_start" min='{{ $startday }}' max='{{ $endday }}' required>
+                          <input placeholder="⇉ Check-Out" class="cal_style" type="text" onfocus="(this.type='date')" id="searchdate_numberofdays" name="t_end" min='{{ $startday }}'  max="60" required>
                           {{-- <input class="cal_style" placeholder="DD/MM/YYYY" type="date" id="t_start" name="t_start" min='{{ $startday }}' max='{{ $endday }}'> --}}
-                          <input id="searchdate_numberofdays" min="0" max="{{ $maparray["set_admin"]->max_no_days }}" type="number" name="no_of_day" placeholder="{{ __('Number of days') }}: 1">
+                          {{-- <input id="searchdate_numberofdays" min="0" max="60" type="number" name="no_of_day" placeholder="{{ __('Number of days') }}: 1"> --}}
                           @isset($maparray['err_msg'])
-                            <span id="errormsg_txt" style="color:red;"> {{ __('You can book maximum') }} {{ $maparray["set_admin"]->max_no_days }} {{ __('days') }}.</span><br>
+                            <span id="errormsg_txt" style="color:red;">{{ __('You have to book for minimum') }} 60 {{ __('days') }}.</span><br>
                           @endisset
 
 
