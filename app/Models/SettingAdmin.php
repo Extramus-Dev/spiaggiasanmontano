@@ -70,12 +70,47 @@ class SettingAdmin extends Model
           }
 
 
+          if ($checkin1 >= strtotime("2022-06-01") && $checkin1 <= strtotime("2022-06-30") && $checkout2 <= strtotime("2022-07-31")){
+
+            if($numOfadults == 1){
+              $daysRemaining += 1;
+              $june_calulation = ($place->price1/ $numOfDaysInMonth) * $daysRemaining;
+              $july_calculation = ($place->price1/ $numOfDaysInMonth) * $daysRemaining;
+              $price_tm = $june_calulation + $july_calculation;
+            }
+
+            elseif($numOfadults == 2){
+              $daysRemaining += 1;
+              $june_calulation = ($place->price2/ $numOfDaysInMonth) * $daysRemaining;
+              $july_calculation = ($place->price2/ $numOfDaysInMonth) * $daysRemaining;
+              $price_tm = $june_calulation + $july_calculation;
+            }
+
+            elseif($numOfadults == 3){
+              $daysRemaining += 1;
+              $june_calulation = ($place->price3/ $numOfDaysInMonth) * $daysRemaining;
+              $july_calculation = ($place->price3/ $numOfDaysInMonth) * $daysRemaining;
+              $price_tm = $june_calulation + $july_calculation;
+            }
+
+            
+            elseif($numOfadults == 4){
+              $daysRemaining += 1;
+              $june_calulation = ($place->price4/ $numOfDaysInMonth) * $daysRemaining;
+              $july_calculation = ($place->price4/ $numOfDaysInMonth) * $daysRemaining;
+              $price_tm = $june_calulation + $july_calculation;
+            }
+            return round($price_tm);
+
+          }
+
 
 
 
           if ($checkin1 >= strtotime("2022-06-01") && $checkin1 <= strtotime("2022-06-30") && $checkout2 <= strtotime("2022-08-31")){
 
             if($numOfadults == 1){
+              echo "tamer here";
               $daysRemaining += 1;
               echo $daysRemaining;
               $june_calulation = ($place->price1/ $numOfDaysInMonth) * $daysRemaining;
