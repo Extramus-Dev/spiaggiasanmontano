@@ -142,8 +142,8 @@ class SettingAdmin extends Model
               $july_calculation = ($place->price4/ $numOfDaysInMonth) * $daysRemaining;
               $august_calcualtion = $place->price4;
               $price_tm = $july_calculation + $august_calcualtion;
+
             }
-            return round($price_tm);
 
           }
 
