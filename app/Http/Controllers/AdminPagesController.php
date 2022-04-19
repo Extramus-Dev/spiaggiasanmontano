@@ -49,21 +49,34 @@ class AdminPagesController extends Controller
 
     $rec_act_bookings = $set_admin->recentActivaty(7);
 
+
+    function datediffcount($checkin, $checkout){
+      $checkin = strtotime($checkin);
+      $checkout = strtotime($checkout);
+      $datediff = $checkout-$checkin;
+        if(round($datediff / (60 * 60 * 24))<0){
+          return 0;
+        }
+      return round($datediff / (60 * 60 * 24))+1;
+  }
+
+  $no_of_days = datediffcount($request->t_start,$request->t_end);
+
     if (isset($request->place_id)) {
       $error_msg = array();
       if ($request->t_start == "null") {
         array_push($error_msg, "Check-in date is not set.");
       }
       $checkin_date = $request->t_start;
-      $checkout_date = ($request->no_of_day) - 1;
+      $checkout_date = ($no_of_days) - 1;
 
-      $nmofdays = ($request->no_of_day) - 1;
+      $nmofdays = ($no_of_days) - 1;
 
       // handle validation for num of day
-      if (number_format($request->no_of_day) <= 0)
+      if (number_format($no_of_days) <= 0)
         $nmofdays = 0;
       $checkout_date = $checkin_date;
-      if (isset($request->no_of_day)) {
+      if (isset($no_of_days)) {
         $date = $checkin_date;
         $date = strtotime($date);
         $date = strtotime("+" . $nmofdays . " day", $date);

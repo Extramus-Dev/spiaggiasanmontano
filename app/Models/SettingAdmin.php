@@ -14,109 +14,83 @@ class SettingAdmin extends Model
     use HasFactory;
 
     public function calculatePrice($place, $checkin, $checkout, $numOfadults){
-        $numOfdays = date_diff(date_create($checkin), date_create($checkout));
-        $numOfdays->d = $numOfdays->d+1;
-        $price_tm = 0;
-        $AllPrices = SettingAdmin::orderBy('id')->get();
-          for($counter=1; $counter<=$numOfdays->d; $counter++){
-            //MayAndJune
-            if(strtotime($checkin)>=strtotime($AllPrices[0]->season_start) && strtotime($checkin)<=strtotime('2021-06-30')){
-              if(SettingAdmin::checkWeekOrNot($checkin) == 0){
-                if($numOfadults == 1){
-                    $price_tm += $AllPrices[0]->adult1_price;
-                  }else if($numOfadults == 2){
-                    $price_tm += $AllPrices[0]->adult2_price;
-                  }else if($numOfadults == 3){
-                    $price_tm += $AllPrices[0]->adult3_price;
-                  }else if($numOfadults == 4){
-                    $price_tm += $AllPrices[0]->adult4_price;
-                }
-                }else{
-                  if($numOfadults == 1){
-                    $price_tm += $AllPrices[0]->adult1_price_weekend;
-                  }else if($numOfadults == 2){
-                    $price_tm += $AllPrices[0]->adult2_price_weekend;
-                  }else if($numOfadults == 3){
-                    $price_tm += $AllPrices[0]->adult3_price_weekend;
-                  }else if($numOfadults == 4){
-                    $price_tm += $AllPrices[0]->adult4_price_weekend;
-                }
-              }
-             //July
-            }else if(strtotime($checkin)>=strtotime($AllPrices[1]->season_start) && strtotime($checkin)<=strtotime($AllPrices[1]->season_end)){
-              if(SettingAdmin::checkWeekOrNot($checkin) == 0){
-                if($numOfadults == 1){
-                      $price_tm += $AllPrices[1]->adult1_price;
-                    }else if($numOfadults == 2){
-                      $price_tm += $AllPrices[1]->adult2_price;
-                    }else if($numOfadults == 3){
-                      $price_tm += $AllPrices[1]->adult3_price;
-                    }else if($numOfadults == 4){
-                      $price_tm += $AllPrices[1]->adult4_price;
-                    }
-                }else{
-                    if($numOfadults == 1){
-                      $price_tm += $AllPrices[1]->adult1_price_weekend;
-                    }else if($numOfadults == 2){
-                      $price_tm += $AllPrices[1]->adult2_price_weekend;
-                    }else if($numOfadults == 3){
-                      $price_tm += $AllPrices[1]->adult3_price_weekend;
-                    }else if($numOfadults == 4){
-                      $price_tm += $AllPrices[1]->adult4_price_weekend;
-                    }
-                }
-                //August
-            }else if(strtotime($checkin)>=strtotime($AllPrices[2]->season_start) && strtotime($checkin)<=strtotime($AllPrices[2]->season_end)){
-                if(SettingAdmin::checkWeekOrNot($checkin) == 0){
-                    if($numOfadults == 1){
-                      $price_tm += $AllPrices[2]->adult1_price;
-                    }else if($numOfadults == 2){
-                      $price_tm += $AllPrices[2]->adult2_price;
-                    }else if($numOfadults == 3){
-                      $price_tm += $AllPrices[2]->adult3_price;
-                    }else if($numOfadults == 4){
-                      $price_tm += $AllPrices[2]->adult4_price;
-                  }
-                }else{
-                    if($numOfadults == 1){
-                      $price_tm += $AllPrices[2]->adult1_price_weekend;
-                    }else if($numOfadults == 2){
-                      $price_tm += $AllPrices[2]->adult2_price_weekend;
-                    }else if($numOfadults == 3){
-                      $price_tm += $AllPrices[2]->adult3_price_weekend;
-                    }else if($numOfadults == 4){
-                      $price_tm += $AllPrices[2]->adult4_price_weekend;
-                  }
-               }
-               //September
-            }else if(strtotime($checkin)>=strtotime($AllPrices[3]->season_start) && strtotime($checkin)<=strtotime($AllPrices[3]->season_end)){
-                    if(SettingAdmin::checkWeekOrNot($checkin) == 0){
-                      if($numOfadults == 1){
-                          $price_tm += $AllPrices[3]->adult1_price;
-                      }else if($numOfadults == 2){
-                          $price_tm += $AllPrices[3]->adult2_price;
-                      }else if($numOfadults == 3){
-                          $price_tm += $AllPrices[3]->adult3_price;
-                      }else if($numOfadults == 4){
-                          $price_tm += $AllPrices[3]->adult4_price;
-                      }
-                    }else{
-                        if($numOfadults == 1){
-                          $price_tm += $AllPrices[3]->adult1_price_weekend;
-                        }else if($numOfadults == 2){
-                          $price_tm += $AllPrices[3]->adult2_price_weekend;
-                        }else if($numOfadults == 3){
-                          $price_tm += $AllPrices[3]->adult3_price_weekend;
-                        }else if($numOfadults == 4){
-                          $price_tm += $AllPrices[3]->adult4_price_weekend;
-                      }
-                   }
-                }
-            $nextday = date('Y-m-d', strtotime("+1 day", strtotime($checkin)));
-            $checkin = $nextday;
-         }
-         return $price_tm;
+
+
+
+
+      $numOfdays = date_diff(date_create($checkin), date_create($checkout));
+      $numOfdays->d = $this->datediffcount($checkin, $checkout);
+      $price_tm = 0;
+
+      $julyFullOccupied = false;
+      // check if full month covered in july
+      if(strtotime($checkin)<= strtotime("2022-05-01") && strtotime($checkout) >= strtotime('2022-05-31')){
+        // full month of july is occupied
+        $julyFullOccupied = true;
+        $numOfdays->d -= 1;
+      }
+
+
+      if($this->datediffcount("2022-05-31", $checkout) >= 1 && strtotime($checkout) > strtotime("2022-05-31")){
+
+          $numofDaysoct = $this->datediffcount($checkin, "2022-05-31");
+          $numofDaysoct2 = $this->datediffcount("2022-09-01", $checkout);
+          $numofDaysoct3 = $this->datediffcount("2022-08-01", $checkout);
+          $numofDaysoct4 = $this->datediffcount("2022-07-01", $checkout);
+          $numofDaysoct5 = $this->datediffcount("2022-06-01", $checkout);
+          $numofDaysoct6 = $this->datediffcount($checkin, $checkout);
+
+
+
+          $numofDaysoutOct =  $numofDaysoct6;
+
+
+          if($julyFullOccupied)
+            $numofDaysoutOct -= 1;
+          $monthCode = date("m", strtotime($checkout));
+          $monthCode2 = date("m", strtotime($checkin));
+
+
+          if($monthCode2 == "06"){
+            $numOfDaysInMonth = 30;
+          }else if ($monthCode2 == "07"){
+            $numOfDaysInMonth = 31;
+          }
+          else if ($monthCode2 == "08"){
+            $numOfDaysInMonth = 31;
+          }
+          else if ($monthCode2 == "09"){
+            $numOfDaysInMonth = 30;
+          }
+
+          // price without oct
+          if($numOfadults == 1){
+            $price_tm = (($place->price1/ $numOfDaysInMonth)*$numofDaysoutOct);
+            if(($monthCode == "08" || $monthCode2 == "08") || (intval($monthCode) > 8 && intval($monthCode2) < 8)){
+            }
+          }else if($numOfadults == 2){
+            $price_tm = (($place->price2/ $numOfDaysInMonth)*$numofDaysoutOct);
+
+            if(($monthCode == "08" || $monthCode2 == "08") || (intval($monthCode) > 8 && intval($monthCode2) < 8)){
+              // $price_tm += $place->price2;
+            }
+          }else if($numOfadults == 3){
+            $price_tm = (($place->price3/ $numOfDaysInMonth)*$numofDaysoutOct);
+            if(($monthCode == "08" || $monthCode2 == "08") || (intval($monthCode) > 8 && intval($monthCode2) < 8)){
+              // $price_tm += $place->price3;
+            }
+          }else{
+            $price_tm = (($place->price4/ $numOfDaysInMonth)*$numofDaysoutOct);
+            if(($monthCode == "08" || $monthCode2 == "08") || (intval($monthCode) > 8 && intval($monthCode2) < 8)){
+              // $price_tm += $place->price4;
+            }
+          }
+        }
+
+      return round($price_tm);
     }
+
+
 
     public function calculatePriceJuneOnly($place, $checkin, $checkout, $numOfadults){
       $numOfdays = date_diff(date_create($checkin), date_create($checkout));
@@ -144,20 +118,22 @@ class SettingAdmin extends Model
 
       $julyFullOccupied = false;
       // check if full month covered in july
-      if(strtotime($checkin)<= strtotime("2021-07-01") && strtotime($checkout) >= strtotime('2021-07-31')){
+      if(strtotime($checkin)<= strtotime("2022-05-01") && strtotime($checkout) >= strtotime('2022-05-31')){
         // full month of july is occupied
         $julyFullOccupied = true;
         $numOfdays->d -= 1;
       }
 
 
-      if($this->datediffcount("2021-07-31", $checkout) >= 1 && strtotime($checkout) > strtotime("2021-07-31")){
+      if($this->datediffcount("2022-05-31", $checkout) >= 1 && strtotime($checkout) > strtotime("2022-05-31")){
 
-          $numofDaysoct = $this->datediffcount($checkin, "2021-07-31");
-          $numofDaysoct2 = $this->datediffcount("2021-09-01", $checkout);
+          $numofDaysoct = $this->datediffcount($checkin, "2022-05-31");
+          $numofDaysoct2 = $this->datediffcount("2022-09-01", $checkout);
+          $numofDaysoct6 = $this->datediffcount($checkin, $checkout);
 
 
-          $numofDaysoutOct =  $numofDaysoct + $numofDaysoct2;
+
+          $numofDaysoutOct =  $numofDaysoct + $numofDaysoct6;
           if($julyFullOccupied)
             $numofDaysoutOct -= 1;
           $monthCode = date("m", strtotime($checkout));
@@ -186,7 +162,8 @@ class SettingAdmin extends Model
             }
           }
           if($numOfdays->d < 30){
-              $price_tm += ($this->daily_fee * $numofDaysoutOct);
+              // $price_tm += ($this->daily_fee * $numofDaysoutOct);
+              $price_tm += $place->price1;
           }
       }else{
         //no oct month
@@ -201,7 +178,8 @@ class SettingAdmin extends Model
         }
 
         if($numOfdays->d < 30){
-            $price_tm += ($this->daily_fee * $numOfdays->d);
+            // $price_tm += ($this->daily_fee * $numOfdays->d);
+            $price_tm += $place->price1;
         }
       }
 

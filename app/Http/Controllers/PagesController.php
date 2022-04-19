@@ -68,16 +68,29 @@ class PagesController extends Controller
       $checkin_date = $req->t_start;
       $checkout_date = $req->t_end;
 
+      function datediffcount($checkin, $checkout){
+        $checkin = strtotime($checkin);
+        $checkout = strtotime($checkout);
+        $datediff = $checkout-$checkin;
+          if(round($datediff / (60 * 60 * 24))<0){
+            return 0;
+          }
+        return round($datediff / (60 * 60 * 24))+1;
+    }
+
+    $no_of_days = datediffcount($checkin_date, $checkout_date);
+
+
       if($checkin_date=="null")
         return redirect()->route('user.viewsmallplace', $map_name);
-      $nmofdays = ($req->no_of_day)-1;
+      $nmofdays = ($no_of_days)-1;
       // $nmofdays = ceil(abs(strtotime($checkout_date) - strtotime($checkin_date)) / 86400)+1;
 
-      if(number_format($req->no_of_day)<=0)
+      if(number_format($no_of_days)<=0)
         $nmofdays = 0;
       $checkout_date = $checkin_date;
 
-      if(isset($req->no_of_day)){
+      if(isset($no_of_days)){
         $date = $checkin_date;
         $date = strtotime($date);
         $date = strtotime("+".$nmofdays." day", $date);
@@ -111,17 +124,18 @@ class PagesController extends Controller
         $places = $all_places;
       }
       if(Auth::user()){
-        if(number_format($req->no_of_day)>365 && Auth::user()->role != "admin"){
+        if(number_format($no_of_days)>365 && Auth::user()->role != "admin"){
           $err_msg= "error";
           // return redirect()->route('user.viewsmallplace', $map_name)->with('err_msg', $err_msg);
           $maparray = array('map_name' => $map_name, 'map_coods' => $map_coods, 'places'=> $places, 'set_admin'=> $set_admin, 'err_msg' => $err_msg);
           return view('users.smallmap')->with('maparray', $maparray);
         }
-      }else if(number_format($req->no_of_day)>$set_admin->max_no_days){
+      }else if(number_format($no_of_days)<60){
         $err_msg= "error";
         // return redirect()->route('user.viewsmallplace', $map_name)->with('err_msg', $err_msg);
         $maparray = array('map_name' => $map_name, 'map_coods' => $map_coods, 'places'=> $places, 'set_admin'=> $set_admin, 'err_msg' => $err_msg);
         return view('users.smallmap')->with('maparray', $maparray);
+        
 
       }
       if(isset($req->t_start) && $nmofdays<$set_admin->min_no_days-1){
