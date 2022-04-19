@@ -67,22 +67,23 @@ class SettingAdmin extends Model
           if($numOfadults == 1){
             $price_tm = (($place->price1/ $numOfDaysInMonth)*$numofDaysoutOct);
             if(($monthCode == "08" || $monthCode2 == "08") || (intval($monthCode) > 8 && intval($monthCode2) < 8)){
+             $price_tm += $place->price1;
             }
           }else if($numOfadults == 2){
             $price_tm = (($place->price2/ $numOfDaysInMonth)*$numofDaysoutOct);
 
             if(($monthCode == "08" || $monthCode2 == "08") || (intval($monthCode) > 8 && intval($monthCode2) < 8)){
-              // $price_tm += $place->price2;
+              $price_tm += $place->price2;
             }
           }else if($numOfadults == 3){
             $price_tm = (($place->price3/ $numOfDaysInMonth)*$numofDaysoutOct);
             if(($monthCode == "08" || $monthCode2 == "08") || (intval($monthCode) > 8 && intval($monthCode2) < 8)){
-              // $price_tm += $place->price3;
+              $price_tm += $place->price3;
             }
           }else{
             $price_tm = (($place->price4/ $numOfDaysInMonth)*$numofDaysoutOct);
             if(($monthCode == "08" || $monthCode2 == "08") || (intval($monthCode) > 8 && intval($monthCode2) < 8)){
-              // $price_tm += $place->price4;
+              $price_tm += $place->price4;
             }
           }
         }
