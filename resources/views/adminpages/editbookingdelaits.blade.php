@@ -136,7 +136,7 @@
                     </div>
                     <div class="form-group row">
                         <div class="col-md-4 col-form-label text-md-right">
-                          <a class="btn btn-danger" href="{{ route('admin.booking.deletebookingdelaits', $Booking->id) }}">Delete</a>
+                          <a class="btn btn-danger" href="{{ route('admin.booking.deletebookingdelaits', $Booking->id) }}" onclick="confirm('{{ __("Are you sure you want to delete this user?") }}') ? this.parentElement.submit() : ''">Delete</a>
                         </div>
                         <div class="col-md-6 col-form-label text-md-right">
                           <button class="btn btn-primary" type="submit">Update</button>

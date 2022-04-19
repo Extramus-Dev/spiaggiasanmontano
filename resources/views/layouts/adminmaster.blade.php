@@ -50,6 +50,12 @@
               </a>
 
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                  @if ( Auth::user()->role =="admin")
+				  <a class="dropdown-item" href="{{ route('admin') }}">
+
+                      {{ __('Pannello di Controllo') }}
+                  </a>
+                  @endif
                   <a class="dropdown-item" href="{{ route('logout') }}"
                      onclick="event.preventDefault();
                                    document.getElementById('logout-form').submit();">
@@ -93,6 +99,7 @@
   	                <small>MAIN MENU</small>
   	            </li>
   	            <!-- /END Separator -->
+                  @if (Auth::user()->role == "admin")
   	            <button data-toggle="sidebar-colapse" class="bg-dark list-group-item list-group-item-action d-flex align-items-center">
   	                <div class="d-flex w-100 justify-content-start align-items-center">
   	                    <span id="collapse-icon" class="fa fa-2x mr-3"></span>
@@ -106,6 +113,7 @@
   	                    <span class="menu-collapsed">Dashboard</span>
   	                </div>
   	            </a>
+                  @if (Auth::user()->role=="admin")
   	            <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
   	                <div class="d-flex w-100 justify-content-start align-items-center">
   	                    <span class="fa fa-map-o fa-fw mr-3" aria-hidden="true"></span>
@@ -113,6 +121,7 @@
   	                    <span class="submenu-icon ml-auto"></span>
   	                </div>
   	            </a>
+                  @endif
   	            <!-- Submenu content -->
   	            <div id='submenu1' class="collapse sidebar-submenu">
   	                <a href="{{ route('admin.place.viewplaces') }}" class="list-group-item list-group-item-action bg-dark text-white">
@@ -133,12 +142,15 @@
   	            </a>
   	            <!-- Submenu content -->
   	            <div id='submenu2' class="collapse sidebar-submenu">
+
   	                <a href="{{ route('admin.booking.viewbookings') }}" class="list-group-item list-group-item-action bg-dark text-white">
   	                    <span class="menu-collapsed">View Bookings</span>
   	                </a>
+                       @if (Auth::user()->role=="admin")
                     <a href="{{ route('admin.viewbookings.all') }}" class="list-group-item list-group-item-action bg-dark text-white">
   	                    <span class="menu-collapsed">Previous Bookings</span>
   	                </a>
+                       @endif
                     <a href="{{ route('admin.booking.entrance') }}" class="list-group-item list-group-item-action bg-dark text-white">
   	                    {{-- <span class="menu-collapsed">Transactions<span class="badge badge-pill badge-primary ml-2">pro</span></span> --}}
   	                    <span class="menu-collapsed">Entrance</span>
@@ -148,7 +160,7 @@
   	                </a>
 
   	            </div>
-                @if (Auth::user()->role == "admin")
+
                   <a href="{{ route('admin.booking.transaction') }}" class="bg-dark list-group-item list-group-item-action">
                       <div class="d-flex w-100 justify-content-start align-items-center">
                           <span class="fa fa-cc-paypal fa-fw mr-3"></span>
@@ -182,6 +194,12 @@
                       <div class="d-flex w-100 justify-content-start align-items-center">
                           <span class="fa fa-users fa-fw mr-3"></span>
                           <span class="menu-collapsed">{{ __('Staffs') }}</span>
+                      </div>
+                  </a>
+                   <a href="{{ route('admin.users') }}" class="bg-dark list-group-item list-group-item-action">
+                      <div class="d-flex w-100 justify-content-start align-items-center">
+                          <span class="fa fa-users fa-fw mr-3"></span>
+                          <span class="menu-collapsed">{{ __('Users') }}</span>
                       </div>
                   </a>
 

@@ -10,20 +10,8 @@
 
       <div class="modal-body">
 
-        <div class="text-sm-center" style="font-size:16px;">
-          @isset($maparray['err_msg3'])
-            @php
-              $maparray["set_admin"]->max_no_days = -1;
-            @endphp
-            <span id="errormsg_txt1" style="color:Blue;">Booking Start- {{ date("d/m/Y, g:i A", strtotime($maparray["set_admin"]->booking_start)) }}</span><br>
-            <span id="errormsg_txt1" style="color:Blue;">Booking End- {{ date("d/m/Y, g:i A", strtotime($maparray["set_admin"]->booking_end)) }}</span>
-          @endisset
-          <br>
-          <br>
-        </div>
-
-        <div class="alert alert-danger" role="alert">
-          Torneremo disponibili all'apertura dello stabilimento!
+        <div class="text-sm-center">
+          <h3> Per effettuare l'acquisto &egrave; necessario inserire nome utente e password </h3>
         </div>
 
          <a class="btn btn-info float-right" data-dismiss="modal">Close</a>

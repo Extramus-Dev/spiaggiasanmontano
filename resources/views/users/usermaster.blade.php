@@ -48,6 +48,7 @@
 	         <li class="nav-item itmstyle">
 	            <a class="nav-link" href="{{ route('user.allprices') }}"><span>{{ __('Prices') }}</span></a>
 	         </li>
+
 	         {{-- <li class="nav-item dropdown itmstyle">
 	            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 	            <span>{{ __('Sectors') }}</span>
@@ -63,24 +64,30 @@
 	            <a class="nav-link" href="{{ route('user.contact') }}"><span>{{ __('Contact Us') }}</span></a>
 	         </li>
 	      </ul>
-        <ul class="navbar-nav mr-right">
-          <li class="nav-item search_style">
-            {{-- <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="{{ __('Tracking Number') }}" aria-label="Search">
-            </form> --}}
+         <ul class="navbar-nav mr-right">
+
+          @guest
+            <li class="nav-item itmstyle">
+	            <a class="nav-link" href="/admin/login"><span>{{ __('Login') }}</span></a>
           </li>
+
+          @endguest
+
           @auth
             <li class="nav-item itmstyle">
+
               <a id="username_navbar_style" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                   {{ Auth::user()->name }} <span class="caret"></span>
               </a>
 
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{ route('logout') }}"
-                     onclick="event.preventDefault();
-                                   document.getElementById('logout-form').submit();">
-                      {{ __('Logout') }}
-                  </a>
+
+                  <a class="dropdown-item" href="{{  route('admin')}}">Pannello di Controllo </a>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
 
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                       @csrf
@@ -124,8 +131,8 @@
                   <ul class="list-unstyled quick-links margin_text-footer">
                       <li><a href="{{ route('user.regulations') }}"><i class="fa fa-angle-double-right"></i>{{ __('Terms and Regulations') }}</a></li>
                       <li><a href="{{ route('user.privacy') }}"><i class="fa fa-angle-double-right"></i>Privacy Policy</a></li>
-                      {{-- <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Feedback</a></li> --}}
-                      <li><a href="https://www.negombo.it"><i class="fa fa-angle-double-right"></i>Official</a></li>
+                      {{-- <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Feedback</a></li>
+                      <li><a href="https://www.negombo.it"><i class="fa fa-angle-double-right"></i>Official</a></li>--}}
                   </ul>
               </div>
           </div>
@@ -134,7 +141,7 @@
           <div class="row">
               <div class="col-md-8 col-sm-6 col-xs-12">
                   <div class="footer-copyright">
-                      <span>Copyright &copy; 2020-2021 All Rights Reserved by <a target="_blank" href="http://www.negombo.it">Negombo</a></span>
+                        <span>Copyright &copy; 2020-{{ date('Y') }} All Rights Reserved by <a target="_blank" href="http://www.negombo.it">Negombo</a></span>
                   </div>
               </div>
               <div class="col-md-4 col-sm-6 col-xs-12">
@@ -154,4 +161,12 @@
 
 <script src="{{ asset('js/t-datepicker.min.js') }}"></script>
 <script src="{{ asset('js/negomgo2020.js') }}"></script>
+<script>
+    @guest
+    $('#bookingStopedModal').modal({
+            backdrop: 'static',
+            keyboard: false
+          });
+    @endguest
+</script>
 </html>

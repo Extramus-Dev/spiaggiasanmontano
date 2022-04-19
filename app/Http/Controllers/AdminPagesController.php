@@ -269,7 +269,24 @@ class AdminPagesController extends Controller
     $user->delete();
     return redirect()->route('admin.staffs');
   }
+   public function usersdelete($id)
+  {
+    if (Auth::user()->role != "admin")
+      return redirect()->route('error.404');
+    $user = User::find($id);
+    $user->delete();
+    return redirect()->route('admin.users');
+  }
   public function staffseditview($id)
+  {
+    if (!Auth::user())
+      return redirect()->route('error.404');
+    $user = User::find($id);
+    if (is_null($user))
+      return redirect()->route('error.404');
+    return view('adminpages.editstaff')->with('user', $user);
+  }
+  public function userseditview($id)
   {
     if (!Auth::user())
       return redirect()->route('error.404');
@@ -284,6 +301,9 @@ class AdminPagesController extends Controller
     $user = User::find($user_id);
     $user->name = $request->name;
     $user->email = $request->email;
+    //$user->address = $request->address;
+    $user->phone = $request->phone;
+    $user->black_list = $request->blacklist;
     $user->role = $request->role;
     $user->save();
     return redirect()->route('admin.staffs');
@@ -367,8 +387,16 @@ class AdminPagesController extends Controller
   {
     if (Auth::user()->role != "admin")
       return redirect()->route('error.404');
-    $users = User::orderBy('id')->get();
+   $users = User::orderBy('id')->where('role','<>','user')->get();
     return view('adminpages.viewstaffs')->with('users', $users);
+  }
+
+  public function usersview()
+  {
+    if (Auth::user()->role != "admin")
+      return redirect()->route('error.404');
+    $users = User::orderBy('id')->where('role','=','user')->get();
+    return view('adminpages.viewusers')->with('users', $users);
   }
 
   public function promocodesviews()

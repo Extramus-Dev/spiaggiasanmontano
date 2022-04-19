@@ -168,6 +168,40 @@ class Booking extends Model
     $args = array(
       'serverURL' => 'https://pagamenti.unicredit.it/UNI_CG_SERVICES/services',
       'timeout' => 15000,
+      /*'tid' => 'UNI_DEDICATED',
+       'kSig' => 'UNI_TESTKEY',*/
+      'tid' => '30748199',
+      'kSig' => '3a0j4g6c0g4h1i9j0j1c3a0j4g6j0j1c',
+      'trType' => 'PURCHASE',
+      'currencyCode' => 'EUR',
+      'langID' => 'IT',
+      'shopUserRef' => $this->user_email,
+      'shopID' => $this->user_booking_tracking_id,
+      'amount' => $place_price * 100,
+      'addInfo1' => "Place id: " . $this->place_id,
+      'addInfo2' => "Check-in: " . $this->user_checkin,
+      'addInfo3' => "Check-out: " . $this->user_checkout,
+      'addInfo4' => "NumOfAdults: " . $this->user_no_of_guest,
+      'addInfo5' => "Phone: " . $this->user_phone,
+      'notifyURL' => 'http://temp.spiaggiasanmontano.it/booking/confirm/card/' . $this->user_booking_tracking_id,
+      'errorURL' => 'http://temp.spiaggiasanmontano.it/404',
+      // 'notifyURL' => 'http://127.0.0.1:8000/booking/confirm/card/'.$this->user_booking_tracking_id,
+      // 'errorURL' => 'http://127.0.0.1:8000/404',
+    );
+    $redirect = $unicredit->init($args);
+    // echo $unicredit->getPaymentID();
+    return  $arrayName = array('redirect' => $redirect, 'paymentID' => $unicredit->getPaymentID());;
+  }
+
+  /*
+  public function paywithCard($place_price)
+  {
+    // implementation of api
+    $unicredit = new UnicreditApi();
+    // $args = array('serverURL' => 'https://testeps.netswgroup.it/UNI_CG_SERVICES/services',
+    $args = array(
+      'serverURL' => 'https://pagamenti.unicredit.it/UNI_CG_SERVICES/services',
+      'timeout' => 15000,
       // 'tid' => 'UNI_DEDICATED',
       // 'kSig' => 'UNI_TESTKEY',
       'tid' => '30687553',
@@ -191,7 +225,7 @@ class Booking extends Model
     $redirect = $unicredit->init($args);
     // echo $unicredit->getPaymentID();
     return  $arrayName = array('redirect' => $redirect, 'paymentID' => $unicredit->getPaymentID());;
-  }
+  }*/
 
 
 
@@ -202,10 +236,10 @@ class Booking extends Model
     $args = array(
       'serverURL' => 'https://pagamenti.unicredit.it/UNI_CG_SERVICES/services',
       'timeout' => 15000,
-      // 'tid' => 'UNI_DEDICATED',
-      // 'kSig' => 'UNI_TESTKEY',
-      'tid' => '30687553',
-      'kSig' => '3a0j4g6c0f8g5e3j0j1a3a0j4g6j0j1a',
+      /*'tid' => 'UNI_DEDICATED',
+       'kSig' => 'UNI_TESTKEY',*/
+      'tid' => '30748199',
+      'kSig' => '3a0j4g6c0g4h1i9j0j1c3a0j4g6j0j1c',
       'shopID' => $this->user_booking_tracking_id,
     );
     $response = $unicredit->verify($paymentID, $args);

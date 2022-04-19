@@ -4,7 +4,22 @@
   <div class="container paddingTop20">
     <h1>Spiaggia Admin Panel</h1>
     <hr>
-    <div class="row">
+
+  @if (Auth::user()->role=="user")
+       <div class="row">
+           <div class="col-sm-12">
+             <div class="card">
+                <div class="card-header bg-primary">
+                    <span class="dashboardcardstyle">{{ __('Quick Booking') }}</span>
+                </div>
+                <div class="card-body">
+                 {{--     <center><button type="button" class="btn btn-success dashboardcardbodystyle2" data-toggle="modal" data-target="#myModal">{{ __('Book Now') }}</button></center>
+                    @include('layouts.quickbookingmodal')  --}}
+             </div>
+           </div>
+       </div>
+    @else
+         <div class="row">
       <div class="col-sm-4">
         <div class="card">
           <div class="card-header bg-primary">
@@ -117,6 +132,8 @@
         </div>
       </div>
     </div>
+    @endif
+
     {{-- second row of dashboard --}}
   </div>
 @endsection

@@ -41,7 +41,7 @@
                   <input class="form-control" type="number" name="place_price3" value="{{ $place->price3 }}" required><br>
                   <label>Price 4 Person(monthly):</label>
                   <input class="form-control" type="number" name="place_price4" value="{{ $place->price4 }}" required><br>
-                  <a href="{{ route('admin.place.delete', $place->place_id) }}" class="btn btn-danger">Delete</a>
+                  <a href="{{ route('admin.place.delete', $place->place_id) }}" class="btn btn-danger" onclick="confirm('{{ __("Are you sure you want to delete this user?") }}') ? this.parentElement.submit() : ''">Delete</a>
                   <input type="submit" class="btn btn-primary" id="btn_addplcsub" value="Update">
               </div>
           </div>

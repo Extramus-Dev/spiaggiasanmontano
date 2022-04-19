@@ -27,7 +27,7 @@
                         <td>{{ $users->created_at }}</td>
                         <td> <a href="{{ route('admin.staffs.edit', $users->id) }}">{{ _('Edit') }}</a>
                           @if (Auth::user()->email != $users->email)
-                            / <a href="{{ route('admin.staffs.delete', $users->id) }}">{{ _('Delete') }}</a>
+                            / <a href="{{ route('admin.staffs.delete', $users->id) }}" onclick="confirm('{{ __("Are you sure you want to delete this user?") }}') ? this.parentElement.submit() : ''">{{ _('Delete') }}</a>
                           @endif
                         </td>
                     </tr>
