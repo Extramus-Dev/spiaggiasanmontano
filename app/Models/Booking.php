@@ -162,16 +162,19 @@ class Booking extends Model
   // https://pagamenti.unicredit.it/UNI_CG_BO_WEB/
   public function paywithCard($place_price)
   {
+
     // implementation of api
     $unicredit = new UnicreditApi();
     // $args = array('serverURL' => 'https://testeps.netswgroup.it/UNI_CG_SERVICES/services',
     $args = array(
-      'serverURL' => 'https://pagamenti.unicredit.it/UNI_CG_SERVICES/services',
+      'serverURL' => "https://testeps.netswgroup.it/UNI_CG_SERVICES/services",
       'timeout' => 15000,
-      // 'tid' => 'UNI_DEDICATED',
+      'tid' => 'UNI_DEDICATED',
       // 'kSig' => 'UNI_TESTKEY',
-      'tid' => '30687553',
-      'kSig' => '3a0j4g6c0f8g5e3j0j1a3a0j4g6j0j1a',
+      // 'tid' =>"UNI_ECOM",
+      'kSig' =>"UNI_TESTKEY",
+      // 'tid' => '30687553',
+      // 'kSig' => '3a0j4g6c0f8g5e3j0j1a3a0j4g6j0j1a',
       'trType' => 'PURCHASE',
       'currencyCode' => 'EUR',
       'langID' => 'IT',
@@ -183,8 +186,8 @@ class Booking extends Model
       'addInfo3' => "Check-out: " . $this->user_checkout,
       'addInfo4' => "NumOfAdults: " . $this->user_no_of_guest,
       'addInfo5' => "Phone: " . $this->user_phone,
-      'notifyURL' => 'http://spiaggiasanmontano.it/booking/confirm/card/' . $this->user_booking_tracking_id,
-      'errorURL' => 'http://spiaggiasanmontano.it/404',
+      'notifyURL' => 'http://localhost/spiaggia/public/booking/confirm/card/' . $this->user_booking_tracking_id,
+      'errorURL' => 'http://localhost/spiaggia/public/404',
       // 'notifyURL' => 'http://127.0.0.1:8000/booking/confirm/card/'.$this->user_booking_tracking_id,
       // 'errorURL' => 'http://127.0.0.1:8000/404',
     );
@@ -200,8 +203,10 @@ class Booking extends Model
     $unicredit = new UnicreditApi();
     // $args = array('serverURL' => 'https://testeps.netswgroup.it/UNI_CG_SERVICES/services',
     $args = array(
-      'serverURL' => 'https://pagamenti.unicredit.it/UNI_CG_SERVICES/services',
+      'serverURL' => "https://testeps.netswgroup.it/UNI_CG_SERVICES/services",
       'timeout' => 15000,
+      'tid' =>"UNI_ECOM",
+      'kSig' =>"UNI_TESTKEY",
       // 'tid' => 'UNI_DEDICATED',
       // 'kSig' => 'UNI_TESTKEY',
       'tid' => '30687553',
