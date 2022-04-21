@@ -18,6 +18,11 @@ class SettingAdmin extends Model
 
 
 
+      $checkin1 = strtotime($checkin);
+      $checkout2 = strtotime($checkout);
+
+
+
       $numOfdays = date_diff(date_create($checkin), date_create($checkout));
       $numOfdays->d = $this->datediffcount($checkin, $checkout);
       $price_tm = 0;
@@ -41,8 +46,12 @@ class SettingAdmin extends Model
           $numofDaysoct6 = $this->datediffcount($checkin, $checkout);
 
 
+          $numofDaysoutOct =  $numofDaysoct6 ;
 
-          $numofDaysoutOct =  $numofDaysoct6;
+
+          $timestamp = strtotime($checkin);
+
+          $daysRemaining = (int)date('t', $timestamp) - (int)date('j', $timestamp);
 
 
           if($julyFullOccupied)
